@@ -11,3 +11,7 @@
 .list-font-size{
 	font-size: 16px !important;
 }
+
+code {
+	font-family: Hack, monospace;
+}
