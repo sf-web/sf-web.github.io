@@ -15,7 +15,7 @@ body.dark h6 {
 }
 
 body.dark p, li, li a {
-  color: #777;
+  color: #999;
 }
 
 body.dark .headline {
@@ -40,21 +40,21 @@ body.dark .top-nav-collapse.navbar-default .navbar-nav > li > a:before {
 }
 
 body.dark .top-nav-collapse .navbar-brand {
-  color: #eee !important; 
+  color: #eee !important;
 }
 
 body.dark .top-nav-collapse.navbar-default .navbar-toggle .icon-bar {
   background: #fff;
 }
 
-body.dark .top-nav-collapse .navbar-brand, 
-body.dark .top-nav-collapse .navbar-nav > li > a, 
+body.dark .top-nav-collapse .navbar-brand,
+body.dark .top-nav-collapse .navbar-nav > li > a,
 body.dark .top-nav-collapse.navbar-default .navbar-nav > li > a:before {
   color: #fff;
 }
 
-body.dark .top-nav-collapse .navbar-nav > .active > a, 
-body.dark .top-nav-collapse .navbar-nav > .active > a:hover, 
+body.dark .top-nav-collapse .navbar-nav > .active > a,
+body.dark .top-nav-collapse .navbar-nav > .active > a:hover,
 body.dark .top-nav-collapse .navbar-nav > .active > a:focus {
     color: #72c02c;
 }
@@ -64,8 +64,8 @@ body.dark .team-v1,
 body.dark .news-section,
 body.dark .about-section .about-image {
   background: #111;
-  border-top-color: #171717; 
-  border-bottom-color: #171717; 
+  border-top-color: #171717;
+  border-bottom-color: #171717;
 }
 
 /*Revolution Slider*/
@@ -134,12 +134,12 @@ body.dark .parallax-twitter-in li p {
 }
 
 /*Testimonials v3*/
-body.dark .testimonials-v3 .owl-buttons .owl-prev, 
+body.dark .testimonials-v3 .owl-buttons .owl-prev,
 body.dark .testimonials-v3 .owl-buttons .owl-next {
   background-color: #222;
 }
 
-body.dark .testimonials-v3 .owl-buttons .owl-prev:hover, 
+body.dark .testimonials-v3 .owl-buttons .owl-prev:hover,
 body.dark .testimonials-v3 .owl-buttons .owl-next:hover {
   background-color: #333;
 }
