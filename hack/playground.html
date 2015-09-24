@@ -106,6 +106,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <form>
                         <div class="margin-bottom-50">
                             <div class="styled-select">
+                                <span></span>
                                 <select id="face" size="1">
                                     <option selected>Hack</option>
                                     <option>Monaco</option>
@@ -116,6 +117,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </select>
                             </div>
                             <div class="styled-select">
+                                <span></span>
                                 <select id="size" size="1">
                                     <option>6</option>
                                     <option>8</option>
@@ -132,6 +134,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </select>
                             </div>
                             <div class="styled-select">
+                                <span></span>
                                 <select id="mode" size="1">
                                     <option value="ace/mode/abap">Abap</option>
                                     <option value="ace/mode/actionscript">ActionScript</option>
@@ -368,6 +371,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
         $('#face').change(function (ev) {
             var face = $(this).val();
+            $(this).parent().find("span").text(face);
             editor.setOptions({
                 fontFamily: face
             });
@@ -375,15 +379,19 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         .trigger("change");
         $('#size').change(function (ev) {
             var size = $(this).val();
+            $(this).parent().find("span").text(size);
             editor.setOptions({
                 fontSize: size + "pt"
             });
         })
         .trigger("change");
         $('#mode').change(function (ev) {
-            var mode = $(this).val();
+            var mode = $(this).val(),
+                displayMode = $(this).find("option:selected").text();
+            $(this).parent().find("span").text(displayMode);
             editor.getSession().setMode(mode);
-        });
+        })
+        .trigger("change");
     });
     </script>
     <!--[if lt IE 9]>
