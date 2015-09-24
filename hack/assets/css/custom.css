@@ -1,0 +1,17 @@
+/* Add here all your css styles (customizations) */
+
+.serif-smalltext {
+	font-family: Merriweather, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.type-lato {
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.list-font-size{
+	font-size: 16px !important;
+}
+
+code {
+	font-family: Hack, monospace;
+}
