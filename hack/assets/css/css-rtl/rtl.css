@@ -1,0 +1,38 @@
+* {
+  direction: rtl;
+  unicode-bidi: embed; /* bidi-override */
+}
+
+.style-swticher-header .theme-close {
+  left: 6px;
+  right: auto;
+}
+
+.tparrows.tp-rightarrow .tp-arr-titleholder  {
+	text-align: right;
+}
+
+/* Arrows */
+.fa-angle-left::before {
+  content: "\f105";
+}
+.fa-angle-right::before {
+  content: "\f104";
+}
+
+.owl-carousel .owl-item .avatar-of-reviewer,
+.owl-carousel .owl-item .owl-img-auto {
+	width: auto;
+	display: inline-block;
+}
+
+.testimonials-v3 .owl-buttons .owl-next::after,
+.testimonials-v3 .owl-buttons .owl-prev::after {
+	cursor: pointer;
+}
+.testimonials-v3 .owl-buttons .owl-next::after {
+  content: "\f104";
+}
+.testimonials-v3 .owl-buttons .owl-prev::after {
+  content: "\f105";
+}

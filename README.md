@@ -1,2 +1,2 @@
-# sforg
-sourcefoundry.org web site development repository
+# source-foundry.github.io
+Source Foundry
