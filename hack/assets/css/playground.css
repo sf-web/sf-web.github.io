@@ -1,0 +1,28 @@
+/* Add here any styles applying to the Playground page */
+
+.styled-select {
+	display: inline-block;
+	min-height: 2em;
+	overflow: hidden;
+	background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMzUwIj48cG9seWdvbiBwb2ludHM9IjEwMCAwIDIwMCAxNTAgMCAxNTAiIGZpbGw9IiM3MmMwMmMiLz48cG9seWdvbiBwb2ludHM9IjEwMCAzNTAgMjAwIDIwMCAwIDIwMCIgZmlsbD0iIzcyYzAyYyIvPjwvc3ZnPgo=) no-repeat right 50%;
+	background-size: 2em 50%;
+	padding-right: 2em;
+}
+
+.styled-select select {
+	background: transparent;
+	width: 100%;
+	padding: .5em 1.5em .5em .5em;
+	font-size: 16px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+#playground {
+	text-align: left;
+	min-height: 15em;
+}
