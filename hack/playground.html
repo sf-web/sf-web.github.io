@@ -377,7 +377,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         /* Remove fonts that are not webfonts and are not installed */
         var removeUnavailableFonts = function () {
             var select = $('#face option'), option, face;
-            for (var i = 0; i < select.length; i++) {
+            // skip first entry = Hack,
+            // never remove it even when it's not finished loading yet
+            for (var i = 1; i < select.length; i++) {
                 option = select.eq(i);
                 face   = option.text();
                 if (!isFontAvailable(face)) {
