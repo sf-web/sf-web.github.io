@@ -105,15 +105,24 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     </p>
                     <form>
                         <div class="margin-bottom-50">
-                            <div class="styled-select">
+                            <div class="styled-select face">
                                 <span></span>
                                 <select id="face" size="1">
                                     <option selected>Hack</option>
-                                    <option>Monaco</option>
-                                    <option>Menlo</option>
-                                    <option>Ubuntu Mono</option>
+                                    <option data-webfont>Anonymous Pro</option>
                                     <option>Consolas</option>
-                                    <option>Source Code Pro</option>
+                                    <option data-webfont>Cousine</option>
+                                    <option data-webfont>Cutive Mono</option>
+                                    <option data-webfont>Droid Sans Mono</option>
+                                    <option data-webfont>Fira Mono</option>
+                                    <option data-webfont>Inconsolata</option>
+                                    <option>Menlo</option>
+                                    <option>Monaco</option>
+                                    <option data-webfont>Oxygen Mono</option>
+                                    <option data-webfont>PT Mono</option>
+                                    <option data-webfont>Roboto Mono</option>
+                                    <option data-webfont>Source Code Pro</option>
+                                    <option data-webfont>Ubuntu Mono</option>
                                 </select>
                             </div>
                             <div class="styled-select">
@@ -245,9 +254,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
                         <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
                     </form>
-                    <p>
-                        Please note: You will see some of the proprietary fonts in the list above only if they are installed on your device.
-                    </p>
                 </div>
             </div>
         </div>
@@ -358,12 +364,33 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- JS Page Level-->
     <script type="text/javascript" src="assets/js/one.app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/pace-loader.js"></script>
-     <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
         App.initParallaxBg();
 
+        /* Font checker */
+        (function(c){var b,d,e,f,g,h=c.body,a=c.createElement("div");a.innerHTML='<span style="'+["position:absolute","width:auto","font-size:128px","left:-99999px"].join(" !important;")+'">'+Array(100).join("wi")+"</span>";a=a.firstChild;b=function(b){a.style.fontFamily=b;h.appendChild(a);g=a.clientWidth;h.removeChild(a);return g};d=b("monospace");e=b("serif");f=b("sans-serif");window.isFontAvailable=function(a){return d!==b(a+",monospace")||f!==b(a+",sans-serif")||e!==b(a+",serif")}})(document);
+
+        /* Remove fonts that are not webfonts and are not installed */
+        var removeUnavailableFonts = function () {
+            var select = $('#face option'), option, face;
+            for (var i = 0; i < select.length; i++) {
+                option = select.eq(i);
+                face   = option.text();
+                if (!isFontAvailable(face)) {
+                    if (typeof option.attr('data-webfont') === "undefined") {
+                        // no web font available, we must remove this font
+                        option.remove();
+                    }
+                }
+            }
+        };
+        removeUnavailableFonts();
+
+        /* Editor controls */
         var editor = ace.edit("playground");
         editor.getSession().setUseWorker(false);
         editor.setTheme("ace/theme/monokai");
@@ -372,6 +399,14 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         $('#face').change(function (ev) {
             var face = $(this).val();
             $(this).parent().find("span").text(face);
+            if (!isFontAvailable(face)) {
+                // instruct the loader to fetch this font for us
+                WebFont.load({
+                    google: {
+                        families: [face]
+                    }
+                });
+            }
             editor.setOptions({
                 fontFamily: face
             });
