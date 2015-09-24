@@ -95,115 +95,156 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <div class="container">
                 <div class="title-v1">
                     <h2>Font playground</h2>
+                    <p>
+                        See Hack (and other source code fonts) live in action!<br>
+                        Just paste your code and play around with the options.
+                    </p>
+                    <p class="margin-bottom-50">
+                        Please note: The entered/pasted code is not uploaded
+                        anywhere, just displayed in your local browser.
+                    </p>
                     <form>
-                        <select id="mode" size="1">
-                            <option value="ace/mode/abap">abap</option>
-                            <option value="ace/mode/actionscript">actionscript</option>
-                            <option value="ace/mode/ada">ada</option>
-                            <option value="ace/mode/asciidoc">asciidoc</option>
-                            <option value="ace/mode/assembly_x86">assembly_x86</option>
-                            <option value="ace/mode/autohotkey">autohotkey</option>
-                            <option value="ace/mode/batchfile">batchfile</option>
-                            <option value="ace/mode/c9search">c9search</option>
-                            <option value="ace/mode/c_cpp">c_cpp</option>
-                            <option value="ace/mode/clojure">clojure</option>
-                            <option value="ace/mode/cobol">cobol</option>
-                            <option value="ace/mode/coffee">coffee</option>
-                            <option value="ace/mode/coldfusion">coldfusion</option>
-                            <option value="ace/mode/csharp">csharp</option>
-                            <option value="ace/mode/css">css</option>
-                            <option value="ace/mode/curly">curly</option>
-                            <option value="ace/mode/d">d</option>
-                            <option value="ace/mode/dart">dart</option>
-                            <option value="ace/mode/diff">diff</option>
-                            <option value="ace/mode/django">django</option>
-                            <option value="ace/mode/dot">dot</option>
-                            <option value="ace/mode/ejs">ejs</option>
-                            <option value="ace/mode/erlang">erlang</option>
-                            <option value="ace/mode/forth">forth</option>
-                            <option value="ace/mode/ftl">ftl</option>
-                            <option value="ace/mode/glsl">glsl</option>
-                            <option value="ace/mode/golang">golang</option>
-                            <option value="ace/mode/groovy">groovy</option>
-                            <option value="ace/mode/haml">haml</option>
-                            <option value="ace/mode/handlebars">handlebars</option>
-                            <option value="ace/mode/haskell">haskell</option>
-                            <option value="ace/mode/haxe">haxe</option>
-                            <option value="ace/mode/html">html</option>
-                            <option value="ace/mode/html_ruby">html_ruby</option>
-                            <option value="ace/mode/ini">ini</option>
-                            <option value="ace/mode/jade">jade</option>
-                            <option value="ace/mode/java">java</option>
-                            <option value="ace/mode/javascript" selected>javascript</option>
-                            <option value="ace/mode/json">json</option>
-                            <option value="ace/mode/jsoniq">jsoniq</option>
-                            <option value="ace/mode/jsp">jsp</option>
-                            <option value="ace/mode/jsx">jsx</option>
-                            <option value="ace/mode/julia">julia</option>
-                            <option value="ace/mode/latex">latex</option>
-                            <option value="ace/mode/less">less</option>
-                            <option value="ace/mode/liquid">liquid</option>
-                            <option value="ace/mode/lisp">lisp</option>
-                            <option value="ace/mode/livescript">livescript</option>
-                            <option value="ace/mode/logiql">logiql</option>
-                            <option value="ace/mode/lsl">lsl</option>
-                            <option value="ace/mode/lua">lua</option>
-                            <option value="ace/mode/luapage">luapage</option>
-                            <option value="ace/mode/lucene">lucene</option>
-                            <option value="ace/mode/makefile">makefile</option>
-                            <option value="ace/mode/markdown">markdown</option>
-                            <option value="ace/mode/matlab">matlab</option>
-                            <option value="ace/mode/mushcode">mushcode</option>
-                            <option value="ace/mode/mushcode_high_rules">mushcode_high_rules</option>
-                            <option value="ace/mode/mysql">mysql</option>
-                            <option value="ace/mode/objectivec">objectivec</option>
-                            <option value="ace/mode/ocaml">ocaml</option>
-                            <option value="ace/mode/pascal">pascal</option>
-                            <option value="ace/mode/perl">perl</option>
-                            <option value="ace/mode/pgsql">pgsql</option>
-                            <option value="ace/mode/php">php</option>
-                            <option value="ace/mode/powershell">powershell</option>
-                            <option value="ace/mode/prolog">prolog</option>
-                            <option value="ace/mode/properties">properties</option>
-                            <option value="ace/mode/python">python</option>
-                            <option value="ace/mode/r">r</option>
-                            <option value="ace/mode/rdoc">rdoc</option>
-                            <option value="ace/mode/rhtml">rhtml</option>
-                            <option value="ace/mode/ruby">ruby</option>
-                            <option value="ace/mode/rust">rust</option>
-                            <option value="ace/mode/sass">sass</option>
-                            <option value="ace/mode/scad">scad</option>
-                            <option value="ace/mode/scala">scala</option>
-                            <option value="ace/mode/scheme">scheme</option>
-                            <option value="ace/mode/scss">scss</option>
-                            <option value="ace/mode/sh">sh</option>
-                            <option value="ace/mode/snippets">snippets</option>
-                            <option value="ace/mode/sql">sql</option>
-                            <option value="ace/mode/stylus">stylus</option>
-                            <option value="ace/mode/svg">svg</option>
-                            <option value="ace/mode/tcl">tcl</option>
-                            <option value="ace/mode/tex">tex</option>
-                            <option value="ace/mode/text">text</option>
-                            <option value="ace/mode/textile">textile</option>
-                            <option value="ace/mode/toml">toml</option>
-                            <option value="ace/mode/twig">twig</option>
-                            <option value="ace/mode/typescript">typescript</option>
-                            <option value="ace/mode/vbscript">vbscript</option>
-                            <option value="ace/mode/velocity">velocity</option>
-                            <option value="ace/mode/verilog">verilog</option>
-                            <option value="ace/mode/xml">xml</option>
-                            <option value="ace/mode/xquery">xquery</option>
-                            <option value="ace/mode/yaml">yaml</option>
-                        </select>
-                        <div id="playground">
-                        function foo(items) {
-                            var x = "All this is syntax highlighted";
-                            return x;
-                        }</div>
-                        <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-
+                        <div class="margin-bottom-50">
+                            <div class="styled-select">
+                                <select id="face" size="1">
+                                    <option selected>Hack</option>
+                                    <option>Monaco</option>
+                                    <option>Menlo</option>
+                                    <option>Ubuntu Mono</option>
+                                    <option>Consolas</option>
+                                    <option>Source Code Pro</option>
+                                </select>
+                            </div>
+                            <div class="styled-select">
+                                <select id="size" size="1">
+                                    <option>6</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option selected>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>14</option>
+                                    <option>16</option>
+                                    <option>20</option>
+                                    <option>36</option>
+                                    <option>48</option>
+                                    <option>72</option>
+                                </select>
+                            </div>
+                            <div class="styled-select">
+                                <select id="mode" size="1">
+                                    <option value="ace/mode/abap">Abap</option>
+                                    <option value="ace/mode/actionscript">ActionScript</option>
+                                    <option value="ace/mode/ada">ADA</option>
+                                    <option value="ace/mode/asciidoc">ASCII-Doc</option>
+                                    <option value="ace/mode/assembly_x86">Assembly-x86</option>
+                                    <option value="ace/mode/autohotkey">AutoHotKey</option>
+                                    <option value="ace/mode/batchfile">Batch file</option>
+                                    <option value="ace/mode/c9search">C9 Search</option>
+                                    <option value="ace/mode/c_cpp">C/C++</option>
+                                    <option value="ace/mode/clojure">Clojure</option>
+                                    <option value="ace/mode/cobol">COBOL</option>
+                                    <option value="ace/mode/coffee">CoffeeScript</option>
+                                    <option value="ace/mode/coldfusion">ColdFusion</option>
+                                    <option value="ace/mode/csharp">C#</option>
+                                    <option value="ace/mode/css">CSS</option>
+                                    <option value="ace/mode/curly">Curly</option>
+                                    <option value="ace/mode/d">D</option>
+                                    <option value="ace/mode/dart">Dart</option>
+                                    <option value="ace/mode/diff">Diff</option>
+                                    <option value="ace/mode/django">Django</option>
+                                    <option value="ace/mode/dot">Dot</option>
+                                    <option value="ace/mode/ejs">EJS</option>
+                                    <option value="ace/mode/erlang">Erlang</option>
+                                    <option value="ace/mode/forth">Forth</option>
+                                    <option value="ace/mode/ftl">FTL</option>
+                                    <option value="ace/mode/glsl">GLSL</option>
+                                    <option value="ace/mode/golang">Go</option>
+                                    <option value="ace/mode/groovy">Groovy</option>
+                                    <option value="ace/mode/haml">HAML</option>
+                                    <option value="ace/mode/handlebars">Handlebars</option>
+                                    <option value="ace/mode/haskell">Haskell</option>
+                                    <option value="ace/mode/haxe">HAXE</option>
+                                    <option value="ace/mode/html">HTML</option>
+                                    <option value="ace/mode/html_ruby">HTML & Ruby</option>
+                                    <option value="ace/mode/ini">INI</option>
+                                    <option value="ace/mode/jade">Jade</option>
+                                    <option value="ace/mode/java">Java</option>
+                                    <option value="ace/mode/javascript" selected>JavaScript</option>
+                                    <option value="ace/mode/json">JSON</option>
+                                    <option value="ace/mode/jsoniq">JSONiQ</option>
+                                    <option value="ace/mode/jsp">JSP</option>
+                                    <option value="ace/mode/jsx">JSX</option>
+                                    <option value="ace/mode/julia">Julia</option>
+                                    <option value="ace/mode/latex">LaTeX</option>
+                                    <option value="ace/mode/less">LESS</option>
+                                    <option value="ace/mode/liquid">Liquid</option>
+                                    <option value="ace/mode/lisp">Lisp</option>
+                                    <option value="ace/mode/livescript">LiveScript</option>
+                                    <option value="ace/mode/logiql">Logiql</option>
+                                    <option value="ace/mode/lsl">LSL</option>
+                                    <option value="ace/mode/lua">Lua</option>
+                                    <option value="ace/mode/luapage">Lua Page</option>
+                                    <option value="ace/mode/lucene">Lucene</option>
+                                    <option value="ace/mode/makefile">Makefile</option>
+                                    <option value="ace/mode/markdown">Markdown</option>
+                                    <option value="ace/mode/matlab">MatLab</option>
+                                    <option value="ace/mode/mushcode">Mushcode</option>
+                                    <option value="ace/mode/mushcode_high_rules">Mushcode (high rules)</option>
+                                    <option value="ace/mode/mysql">MySQL</option>
+                                    <option value="ace/mode/objectivec">Objective C</option>
+                                    <option value="ace/mode/ocaml">OCAML</option>
+                                    <option value="ace/mode/pascal">Pascal</option>
+                                    <option value="ace/mode/perl">Perl</option>
+                                    <option value="ace/mode/pgsql">PgSql</option>
+                                    <option value="ace/mode/php">PHP</option>
+                                    <option value="ace/mode/powershell">PowerShell</option>
+                                    <option value="ace/mode/prolog">Prolog</option>
+                                    <option value="ace/mode/properties">Properties</option>
+                                    <option value="ace/mode/python">Python</option>
+                                    <option value="ace/mode/r">R</option>
+                                    <option value="ace/mode/rdoc">rDoc</option>
+                                    <option value="ace/mode/rhtml">Rhtml</option>
+                                    <option value="ace/mode/ruby">Ruby</option>
+                                    <option value="ace/mode/rust">Rust</option>
+                                    <option value="ace/mode/sass">SASS</option>
+                                    <option value="ace/mode/scad">SCAD</option>
+                                    <option value="ace/mode/scala">Scala</option>
+                                    <option value="ace/mode/scheme">Scheme</option>
+                                    <option value="ace/mode/scss">SCSS</option>
+                                    <option value="ace/mode/sh">Shell script</option>
+                                    <option value="ace/mode/snippets">Snippets</option>
+                                    <option value="ace/mode/sql">SQL</option>
+                                    <option value="ace/mode/stylus">Stylus</option>
+                                    <option value="ace/mode/svg">SVG</option>
+                                    <option value="ace/mode/tcl">TCL</option>
+                                    <option value="ace/mode/tex">TeX</option>
+                                    <option value="ace/mode/text">Text</option>
+                                    <option value="ace/mode/textile">Textile</option>
+                                    <option value="ace/mode/toml">TOML</option>
+                                    <option value="ace/mode/twig">Twig</option>
+                                    <option value="ace/mode/typescript">TypeScript</option>
+                                    <option value="ace/mode/vbscript">VBScript</option>
+                                    <option value="ace/mode/velocity">Velocity</option>
+                                    <option value="ace/mode/verilog">Verilog</option>
+                                    <option value="ace/mode/xml">XML</option>
+                                    <option value="ace/mode/xquery">XQuery</option>
+                                    <option value="ace/mode/yaml">YAML</option>
+                                </select>
+                            </div>
                         </div>
+                        <div class="container">
+                            <pre class="col-md-8 col-md-offset-2" id="playground"
+>function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</pre>
+                        </div>
+                        <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
                     </form>
+                    <p>
+                        Please note: You will see some of the proprietary fonts in the list above only if they are installed on your device.
+                    </p>
                 </div>
             </div>
         </div>
@@ -325,9 +366,22 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         editor.setTheme("ace/theme/monokai");
         editor.getSession().setMode("ace/mode/javascript");
 
-        $('#mode').on('change', function (ev) {
-            var mode = $('option:selected').attr('value');
-            //console.log(mode)
+        $('#face').change(function (ev) {
+            var face = $(this).val();
+            editor.setOptions({
+                fontFamily: face
+            });
+        })
+        .trigger("change");
+        $('#size').change(function (ev) {
+            var size = $(this).val();
+            editor.setOptions({
+                fontSize: size + "pt"
+            });
+        })
+        .trigger("change");
+        $('#mode').change(function (ev) {
+            var mode = $(this).val();
             editor.getSession().setMode(mode);
         });
     });
