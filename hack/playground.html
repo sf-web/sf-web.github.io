@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>Font playground | Hack | A typeface designed for source code</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your own text or source code with the font of your choice.">
+    <meta name="author" content="Christopher Simpkins">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=latin'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/one.style.css">
+
+    <!-- CSS Footer -->
+    <link rel="stylesheet" href="assets/css/footers/footer-v7.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="assets/plugins/pace/pace-flash.css">
+    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+    <link rel="stylesheet" href="assets/css/theme-skins/one.dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/playground.css">
+</head>
+
+<!--
+The #page-top ID is part of the scrolling feature.
+The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
+-->
+
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery dark">
+    <!--=== Header ===-->
+    <nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="menu-container page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="./">
+                    <!-- <span style="color:yellow !important">H</span>ack -->
+                    <img src="assets/img/logo.png" alt="Hack" width="62" height="24">
+
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="menu-container">
+                    <ul class="nav navbar-nav">
+                        <li class="home">
+                            <a href="./">&laquo;&nbsp;back to main page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=== End Header ===-->
+
+    <!--  About Section -->
+    <section id="about" class="about-section section-first">
+        <div class="parallax-counter parallaxBg">
+            <div class="margin-bottom-50"></div>
+            <div class="container">
+                <div class="title-v1">
+                    <h2>Font playground</h2>
+                    <p>
+                        See Hack (and other source code fonts) live in action!<br>
+                        Just paste your code and play around with the options.
+                    </p>
+                    <p class="margin-bottom-50">
+                        Please note: The entered/pasted code is not uploaded
+                        anywhere, just displayed in your local browser.
+                    </p>
+                    <form>
+                        <div class="margin-bottom-50">
+                            <div class="styled-select">
+                                <span></span>
+                                <select id="face" size="1">
+                                    <option selected>Hack</option>
+                                    <option>Monaco</option>
+                                    <option>Menlo</option>
+                                    <option>Ubuntu Mono</option>
+                                    <option>Consolas</option>
+                                    <option>Source Code Pro</option>
+                                </select>
+                            </div>
+                            <div class="styled-select">
+                                <span></span>
+                                <select id="size" size="1">
+                                    <option>6</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option selected>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>14</option>
+                                    <option>16</option>
+                                    <option>20</option>
+                                    <option>36</option>
+                                    <option>48</option>
+                                    <option>72</option>
+                                </select>
+                            </div>
+                            <div class="styled-select">
+                                <span></span>
+                                <select id="mode" size="1">
+                                    <option value="ace/mode/abap">Abap</option>
+                                    <option value="ace/mode/actionscript">ActionScript</option>
+                                    <option value="ace/mode/ada">ADA</option>
+                                    <option value="ace/mode/asciidoc">ASCII-Doc</option>
+                                    <option value="ace/mode/assembly_x86">Assembly-x86</option>
+                                    <option value="ace/mode/autohotkey">AutoHotKey</option>
+                                    <option value="ace/mode/batchfile">Batch file</option>
+                                    <option value="ace/mode/c9search">C9 Search</option>
+                                    <option value="ace/mode/c_cpp">C/C++</option>
+                                    <option value="ace/mode/clojure">Clojure</option>
+                                    <option value="ace/mode/cobol">COBOL</option>
+                                    <option value="ace/mode/coffee">CoffeeScript</option>
+                                    <option value="ace/mode/coldfusion">ColdFusion</option>
+                                    <option value="ace/mode/csharp">C#</option>
+                                    <option value="ace/mode/css">CSS</option>
+                                    <option value="ace/mode/curly">Curly</option>
+                                    <option value="ace/mode/d">D</option>
+                                    <option value="ace/mode/dart">Dart</option>
+                                    <option value="ace/mode/diff">Diff</option>
+                                    <option value="ace/mode/django">Django</option>
+                                    <option value="ace/mode/dot">Dot</option>
+                                    <option value="ace/mode/ejs">EJS</option>
+                                    <option value="ace/mode/erlang">Erlang</option>
+                                    <option value="ace/mode/forth">Forth</option>
+                                    <option value="ace/mode/ftl">FTL</option>
+                                    <option value="ace/mode/glsl">GLSL</option>
+                                    <option value="ace/mode/golang">Go</option>
+                                    <option value="ace/mode/groovy">Groovy</option>
+                                    <option value="ace/mode/haml">HAML</option>
+                                    <option value="ace/mode/handlebars">Handlebars</option>
+                                    <option value="ace/mode/haskell">Haskell</option>
+                                    <option value="ace/mode/haxe">HAXE</option>
+                                    <option value="ace/mode/html">HTML</option>
+                                    <option value="ace/mode/html_ruby">HTML & Ruby</option>
+                                    <option value="ace/mode/ini">INI</option>
+                                    <option value="ace/mode/jade">Jade</option>
+                                    <option value="ace/mode/java">Java</option>
+                                    <option value="ace/mode/javascript" selected>JavaScript</option>
+                                    <option value="ace/mode/json">JSON</option>
+                                    <option value="ace/mode/jsoniq">JSONiQ</option>
+                                    <option value="ace/mode/jsp">JSP</option>
+                                    <option value="ace/mode/jsx">JSX</option>
+                                    <option value="ace/mode/julia">Julia</option>
+                                    <option value="ace/mode/latex">LaTeX</option>
+                                    <option value="ace/mode/less">LESS</option>
+                                    <option value="ace/mode/liquid">Liquid</option>
+                                    <option value="ace/mode/lisp">Lisp</option>
+                                    <option value="ace/mode/livescript">LiveScript</option>
+                                    <option value="ace/mode/logiql">Logiql</option>
+                                    <option value="ace/mode/lsl">LSL</option>
+                                    <option value="ace/mode/lua">Lua</option>
+                                    <option value="ace/mode/luapage">Lua Page</option>
+                                    <option value="ace/mode/lucene">Lucene</option>
+                                    <option value="ace/mode/makefile">Makefile</option>
+                                    <option value="ace/mode/markdown">Markdown</option>
+                                    <option value="ace/mode/matlab">MatLab</option>
+                                    <option value="ace/mode/mushcode">Mushcode</option>
+                                    <option value="ace/mode/mushcode_high_rules">Mushcode (high rules)</option>
+                                    <option value="ace/mode/mysql">MySQL</option>
+                                    <option value="ace/mode/objectivec">Objective C</option>
+                                    <option value="ace/mode/ocaml">OCAML</option>
+                                    <option value="ace/mode/pascal">Pascal</option>
+                                    <option value="ace/mode/perl">Perl</option>
+                                    <option value="ace/mode/pgsql">PgSql</option>
+                                    <option value="ace/mode/php">PHP</option>
+                                    <option value="ace/mode/powershell">PowerShell</option>
+                                    <option value="ace/mode/prolog">Prolog</option>
+                                    <option value="ace/mode/properties">Properties</option>
+                                    <option value="ace/mode/python">Python</option>
+                                    <option value="ace/mode/r">R</option>
+                                    <option value="ace/mode/rdoc">rDoc</option>
+                                    <option value="ace/mode/rhtml">Rhtml</option>
+                                    <option value="ace/mode/ruby">Ruby</option>
+                                    <option value="ace/mode/rust">Rust</option>
+                                    <option value="ace/mode/sass">SASS</option>
+                                    <option value="ace/mode/scad">SCAD</option>
+                                    <option value="ace/mode/scala">Scala</option>
+                                    <option value="ace/mode/scheme">Scheme</option>
+                                    <option value="ace/mode/scss">SCSS</option>
+                                    <option value="ace/mode/sh">Shell script</option>
+                                    <option value="ace/mode/snippets">Snippets</option>
+                                    <option value="ace/mode/sql">SQL</option>
+                                    <option value="ace/mode/stylus">Stylus</option>
+                                    <option value="ace/mode/svg">SVG</option>
+                                    <option value="ace/mode/tcl">TCL</option>
+                                    <option value="ace/mode/tex">TeX</option>
+                                    <option value="ace/mode/text">Text</option>
+                                    <option value="ace/mode/textile">Textile</option>
+                                    <option value="ace/mode/toml">TOML</option>
+                                    <option value="ace/mode/twig">Twig</option>
+                                    <option value="ace/mode/typescript">TypeScript</option>
+                                    <option value="ace/mode/vbscript">VBScript</option>
+                                    <option value="ace/mode/velocity">Velocity</option>
+                                    <option value="ace/mode/verilog">Verilog</option>
+                                    <option value="ace/mode/xml">XML</option>
+                                    <option value="ace/mode/xquery">XQuery</option>
+                                    <option value="ace/mode/yaml">YAML</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <pre class="col-md-8 col-md-offset-2" id="playground"
+>function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</pre>
+                        </div>
+                        <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+                    </form>
+                    <p>
+                        Please note: You will see some of the proprietary fonts in the list above only if they are installed on your device.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=== Footer v3 ===-->
+    <div style="border-top: 3px solid #333; margin-bottom:25px "></div>
+    <div id="footer-v3" class="footer-v3">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-sm-3 md-margin-bottom-40">
+                        <a href="index.html">
+                            <img id="logo-footer" class="footer-logo" src="assets/img/logo.png" alt="Hack" width="62" height="24">
+                        </a>
+                        <p class="type-lato">A typeface designed for source code.</p>
+                    </div>
+                    <!--/col-md-3-->
+                    <!-- End About -->
+
+                    <!-- Simple List -->
+                    <div class="col-sm-3 md-margin-bottom-60 height-250">
+                        <div class="thumb-headline">
+                            <h2>About Hack</h2>
+                        </div>
+                        <ul class="list-unstyled simple-list margin-bottom-20">
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/blob/master/LICENSE.md">License</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/blob/master/CHANGELOG.md">Changelog</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/blob/master/CONTRIBUTORS.md">Contributors</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack#desktop-usage">Usage Guides</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="http://chrissimpkins.github.io/Hack/font-specimen.html">Type Specimen</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--/col-md-3-->
+
+                    <div class="col-sm-3">
+                        <div class="thumb-headline">
+                            <h2>Development</h2>
+                        </div>
+                        <ul class="list-unstyled simple-list">
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack">Source Repository</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/issues/new">Issue Reporting</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/issues?q=is%3Aopen+is%3Aissue">Open Issues</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/tree/development/build/test_builds">Pre-Release Builds</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--/col-md-3-->
+
+                    <div class="col-sm-3">
+                        <div class="thumb-headline">
+                            <h2>Releases</h2>
+                        </div>
+                        <ul class="list-unstyled simple-list">
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-ttf.zip">TrueType Outlines (.ttf)</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-otf.zip">CFF Outlines (.otf)</a>
+                            </li>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-webfonts.zip">Web Font Archive</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--/col-md-3-->
+                    <!-- End Simple List -->
+                </div>
+            </div>
+        </div>
+        <!--/footer-->
+    </div>
+    <!--=== End Footer v3 ===-->
+
+
+    <div class="copyright-section type-lato">
+        <p>Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.
+        </p>
+        <p>Web and font hosting by <a href="https://github.com">Github</a> | Site CDN by <a href="https://www.cloudflare.com/">Cloudflare</a> | Font CDN by <a href="https://github.com/jsdelivr/jsdelivr">jsDelivr</a></p>
+        <ul class="social-icons">
+            <li>
+                <a href="https://twitter.com/csimpkins" data-original-title="Twitter" class="social_twitter rounded-x"></a>
+            </li>
+        </ul>
+        <span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a>
+        </span>
+    </div>
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <!-- JS Page Level-->
+    <script type="text/javascript" src="assets/js/one.app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pace-loader.js"></script>
+     <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initParallaxBg();
+
+        var editor = ace.edit("playground");
+        editor.getSession().setUseWorker(false);
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/javascript");
+
+        $('#face').change(function (ev) {
+            var face = $(this).val();
+            $(this).parent().find("span").text(face);
+            editor.setOptions({
+                fontFamily: face
+            });
+        })
+        .trigger("change");
+        $('#size').change(function (ev) {
+            var size = $(this).val();
+            $(this).parent().find("span").text(size);
+            editor.setOptions({
+                fontSize: size + "pt"
+            });
+        })
+        .trigger("change");
+        $('#mode').change(function (ev) {
+            var mode = $(this).val(),
+                displayMode = $(this).find("option:selected").text();
+            $(this).parent().find("span").text(displayMode);
+            editor.getSession().setMode(mode);
+        })
+        .trigger("change");
+    });
+    </script>
+    <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.js"></script>
+        <script src="assets/plugins/html5shiv.js"></script>
+        <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+    <![endif]-->
+</body>
+
+</html>
