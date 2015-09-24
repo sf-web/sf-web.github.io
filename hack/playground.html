@@ -355,7 +355,8 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- JS Page Level-->
     <script type="text/javascript" src="assets/js/one.app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/pace-loader.js"></script>
-     <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
@@ -389,6 +390,14 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         $('#face').change(function (ev) {
             var face = $(this).val();
             $(this).parent().find("span").text(face);
+            if (!isFontAvailable(face)) {
+                // instruct the loader to fetch this font for us
+                WebFont.load({
+                    google: {
+                        families: [face]
+                    }
+                });
+            }
             editor.setOptions({
                 fontFamily: face
             });
