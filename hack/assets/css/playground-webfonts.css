@@ -3,8 +3,7 @@
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.eot');
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.woff') format('woff'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.ttf') format('truetype'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.svg#bitstream_vera_sans_monoroman') format('svg');
+         url('../fonts/bitstream-vera-sans-mono/VeraMono-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,8 +13,7 @@
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.eot');
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.woff') format('woff'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.svg#bitstream_vera_sans_monoroman') format('svg');
+         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -25,8 +23,7 @@
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.eot');
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.woff') format('woff'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.ttf') format('truetype'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.svg#bitstream_vera_sans_monoroman') format('svg');
+         url('../fonts/bitstream-vera-sans-mono/VeraMono-Italic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -36,8 +33,7 @@
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.eot');
     src: url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.woff') format('woff'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.ttf') format('truetype'),
-         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.svg#bitstream_vera_sans_monoroman') format('svg');
+         url('../fonts/bitstream-vera-sans-mono/VeraMono-Bold-Italic-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
