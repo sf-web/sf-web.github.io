@@ -440,6 +440,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
         /* Editor controls */
         var editor = ace.edit("playground");
+        editor.renderer.setScrollMargin(20);
         editor.getSession().setUseWorker(false);
 
         $('#face').change(function (ev) {
