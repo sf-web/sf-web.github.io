@@ -473,12 +473,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 && face !== 'Hack'
             ) {
                 // instruct the loader to fetch this font for us
-                var webfont = $(this).find("option:selected").attr('data-webfont'),
-                    config  = webfont === "custom"
+                var webfont     = $(this).find("option:selected").attr('data-webfont'),
+                    face_folder = face.toLowerCase().split(" ").join("-"),
+                    config      = webfont === "custom"
                         ? {
                               custom: {
                                   families: [face],
-                                  urls: ['assets/css/playground-webfonts.css']
+                                  urls: ['assets/fonts/' + face_folder + '/webfont.css']
                               }
                           }
                         : {
