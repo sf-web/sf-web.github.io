@@ -8,6 +8,7 @@
 	background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMzUwIj48cG9seWdvbiBwb2ludHM9IjEwMCAwIDIwMCAxNTAgMCAxNTAiIGZpbGw9IiM3MmMwMmMiLz48cG9seWdvbiBwb2ludHM9IjEwMCAzNTAgMjAwIDIwMCAwIDIwMCIgZmlsbD0iIzcyYzAyYyIvPjwvc3ZnPgo=) no-repeat 97% 50%;
 	background-size: 1em 50%;
 	padding-right: 2em;
+	margin-bottom: .5em;
 }
 
 html.wf-loading .styled-select.face {
