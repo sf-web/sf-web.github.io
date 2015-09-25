@@ -100,26 +100,26 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         Just paste your code and play around with the options.
                     </p>
                     <form>
-                        <div class="margin-bottom-50">
+                        <div class="margin-bottom-25">
                             <div class="styled-select face">
                                 <span></span>
                                 <select id="face" size="1">
-                                    <option selected>Hack</option>
-                                    <option data-webfont>Anonymous Pro</option>
-                                    <option>Consolas</option>
-                                    <option data-webfont>Cousine</option>
-                                    <option data-webfont>Cutive Mono</option>
-                                    <option data-webfont>Droid Sans Mono</option>
-                                    <option data-webfont>Fira Mono</option>
-                                    <option data-webfont>Inconsolata</option>
-                                    <option>Lucida Console</option>
-                                    <option>Menlo</option>
-                                    <option>Monaco</option>
-                                    <option data-webfont>Oxygen Mono</option>
-                                    <option data-webfont>PT Mono</option>
-                                    <option data-webfont>Roboto Mono</option>
-                                    <option data-webfont>Source Code Pro</option>
-                                    <option data-webfont>Ubuntu Mono</option>
+                                    <option data-href="http://sourcefoundry.org/hack/" selected>Hack</option>
+                                    <option data-href="http://www.marksimonson.com/fonts/view/anonymous-pro" data-webfont>Anonymous Pro</option>
+                                    <option data-href="https://www.microsoft.com/typography/fonts/family.aspx?FID=300">Consolas</option>
+                                    <option data-href="https://www.google.com/fonts/specimen/Cousine" data-webfont>Cousine</option>
+                                    <option data-href="https://github.com/vernnobile/CutiveFont" data-webfont>Cutive Mono</option>
+                                    <option data-href="http://www.droidfonts.com/info/droid-sans-mono-fonts/" data-webfont>Droid Sans Mono</option>
+                                    <option data-href="http://mozilla.github.io/Fira/" data-webfont>Fira Mono</option>
+                                    <option data-href="http://www.levien.com/type/myfonts/inconsolata.html" data-webfont>Inconsolata</option>
+                                    <option data-href="https://www.microsoft.com/typography/fonts/family.aspx?FID=18">Lucida Console</option>
+                                    <option data-href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</option>
+                                    <option data-href="https://en.wikipedia.org/wiki/Monaco_(typeface)">Monaco</option>
+                                    <option data-href="https://www.google.com/fonts/specimen/Oxygen+Mono" data-webfont>Oxygen Mono</option>
+                                    <option data-href="http://www.paratype.com/public/" data-webfont>PT Mono</option>
+                                    <option data-href="https://www.google.com/fonts/specimen/Roboto+Mono" data-webfont>Roboto Mono</option>
+                                    <option data-href="http://adobe-fonts.github.io/source-code-pro/" data-webfont>Source Code Pro</option>
+                                    <option data-href="http://font.ubuntu.com/" data-webfont>Ubuntu Mono</option>
                                 </select>
                             </div>
                             <div class="styled-select">
@@ -285,6 +285,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </select>
                             </div>
                         </div>
+                        <div class="margin-bottom-25">
+                            <p id="moreinfo" style="visibility: hidden">
+                                More info about the “<span></span>” font:<br>
+                                <a href="#"></a>
+                            </p>
+                        </div>
                         <div class="container">
                             <pre class="col-md-8 col-md-offset-2" id="playground"
 >function foo(items) {
@@ -443,6 +449,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         editor.renderer.setScrollMargin(20);
         editor.getSession().setUseWorker(false);
 
+        // More info link open in new tab
+        $('#moreinfo a').prop('target', '_blank');
+
         $('#face').change(function (ev) {
             var face = $(this).val();
             $(this).parent().find("span").text(face);
@@ -457,6 +466,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             editor.setOptions({
                 fontFamily: face
             });
+
+            // update more info text
+            var href = $(this).find("option:selected").attr('data-href');
+            $('#moreinfo')
+            .find('span').text(face).end()
+            .find('a').prop('href', href).text(href).end()
+            .css('visibility', 'visible');
         })
         .trigger("change");
         $('#size').change(function (ev) {
