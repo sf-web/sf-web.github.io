@@ -34,7 +34,7 @@ li a {
   color: #555;
 }
 
-a:link, a:visited, a:active {
+a {
   color: #72c02c;
   text-decoration: none;
 }
