@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('VeraMono-webfont.eot');
+    src: url('VeraMono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('VeraMono-webfont.woff') format('woff'),
+         url('VeraMono-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('VeraMono-Bold-webfont.eot');
+    src: url('VeraMono-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('VeraMono-Bold-webfont.woff') format('woff'),
+         url('VeraMono-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('VeraMono-Italic-webfont.eot');
+    src: url('VeraMono-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('VeraMono-Italic-webfont.woff') format('woff'),
+         url('VeraMono-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    src: url('VeraMono-Bold-Italic-webfont.eot');
+    src: url('VeraMono-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('VeraMono-Bold-Italic-webfont.woff') format('woff'),
+         url('VeraMono-Bold-Italic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}

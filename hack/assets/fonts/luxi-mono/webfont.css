@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Luxi Mono';
+    src: url('luximr-webfont.eot');
+    src: url('luximr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luximr-webfont.woff') format('woff'),
+         url('luximr-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Luxi Mono';
+    src: url('luximb-webfont.eot');
+    src: url('luximb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luximb-webfont.woff') format('woff'),
+         url('luximb-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Luxi Mono';
+    src: url('luximri-webfont.eot');
+    src: url('luximri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luximri-webfont.woff') format('woff'),
+         url('luximri-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Luxi Mono';
+    src: url('luximbi-webfont.eot');
+    src: url('luximbi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luximbi-webfont.woff') format('woff'),
+         url('luximbi-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
