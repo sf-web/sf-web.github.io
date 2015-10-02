@@ -6,13 +6,13 @@
 <!--<![endif]-->
 
 <head>
-    <title>Font playground | Hack | A typeface designed for source code</title>
+    <title>Font Playground</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Test your own text or source code with the font of your choice.">
-    <meta name="author" content="Jublo Solutions">
+    <meta name="author" content="JM - Jublo Solutions">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
@@ -21,7 +21,7 @@
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=latin'>
     <link href='//fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -97,7 +97,8 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <h2>Font playground</h2>
                     <p class="margin-bottom-50">
                         See Hack (and other monospaced fonts) live in action!<br>
-                        Just paste your code and play around with the options.
+                        Install your fonts locally and they will show up in the dropdown selections.<br>
+                        Use the dropdown options to modify the typeface, text size, language, and highlighter scheme.
                     </p>
                     <form>
                         <div class="margin-bottom-25">
@@ -115,17 +116,23 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <option data-href="http://dejavu-fonts.org/">DejaVu Sans Mono</option>
                                     <option data-href="http://www.droidfonts.com/info/droid-sans-mono-fonts/" data-webfont>Droid Sans Mono</option>
                                     <option data-href="https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released">Envy Code R</option>
+                                    <option data-href="https://github.com/belluzj/fantasque-sans">Fantasque Sans Mono</option>
                                     <option data-href="http://mozilla.github.io/Fira/" data-webfont>Fira Mono</option>
+                                    <option data-href="https://github.com/i-tu/Hasklig/">Hasklig</option>
                                     <option data-href="http://www.levien.com/type/myfonts/inconsolata.html" data-webfont>Inconsolata</option>
+                                    <option data-href="https://github.com/be5invis/iosevka">Iosevka</option>
                                     <option data-href="https://fedorahosted.org/liberation-fonts/" data-webfont="custom">Liberation Mono</option>
                                     <option data-href="https://www.microsoft.com/typography/fonts/family.aspx?FID=18">Lucida Console</option>
+                                    <option data-href="http://eastfarthing.com/luculent/">Luculent</option>
                                     <option data-href="https://en.wikipedia.org/wiki/Luxi_fonts" data-webfont="custom">Luxi Mono</option>
+                                    <option data-href="http://mplus-fonts.osdn.jp/mplus-outline-fonts/">M+ 1m</option>
                                     <option data-href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</option>
                                     <option data-href="https://github.com/andreberg/Meslo-Font">Meslo LG L</option>
                                     <option data-href="https://github.com/andreberg/Meslo-Font">Meslo LG M</option>
                                     <option data-href="https://github.com/andreberg/Meslo-Font">Meslo LG S</option>
                                     <option data-href="https://en.wikipedia.org/wiki/Monaco_(typeface)">Monaco</option>
                                     <option data-href="http://www.dafont.com/monofur.font">Monofur</option>
+                                    <option data-href="http://larsenwork.com/monoid/">Monoid</option>
                                     <option data-href="https://www.google.com/fonts/specimen/Oxygen+Mono" data-webfont>Oxygen Mono</option>
                                     <option data-href="https://github.com/chrissimpkins/codeface/tree/master/fonts/panic-sans-mono/">Panic Sans</option>
                                     <option data-href="http://www.fsd.it/fonts/pragmatapro.htm">Pragmata Pro</option>
@@ -259,7 +266,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <div class="styled-select">
                                 <span></span>
                                 <select id="theme" size="1">
-                                    <optgroup label="Bright">
+                                    <optgroup label="Light">
                                         <option value="ace/theme/chrome">Chrome</option>
                                         <option value="ace/theme/clouds">Clouds</option>
                                         <option value="ace/theme/crimson_editor">Crimson Editor</option>
@@ -309,22 +316,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div class="container">
                             <pre class="col-md-8 col-md-offset-2" id="playground"
 >function foo(items) {
-    var x = "All this is syntax highlighted";
+    var x = "All of this is syntax highlighted";
     return x;
 }</pre>
                         </div>
                         <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script>
                     </form>
                     <p class="margin-bottom-50" style="font-size: 1em">
-                        Please note: The entered/pasted code is not uploaded
-                        anywhere, just displayed in your local browser.
+                        Problems with the Font Playground?  <a href="https://github.com/source-foundry/source-foundry.github.io/issues/new">Issue reporting is available here</a>.
                     </p>
-                    <div id="social-share">
-                        <h2>Share this tool</h2>
-                        <iframe class="share-button" src="https://ghbtns.com/github-btn.html?user=source-foundry&amp;repo=source-foundry.github.io&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
-                        <a href="https://twitter.com/share" class="share-button twitter-share-button" data-text="Test your own code with any monospaced font:" data-via="csimpkins" data-size="large" data-related="csimpkins,jublonet" data-hashtags="fonts">Tweet</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </div>
                 </div>
             </div>
         </div>
@@ -378,8 +378,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             </li>
                             <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/issues?q=is%3Aopen+is%3Aissue">Open Issues</a>
                             </li>
-                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/tree/development/build/test_builds">Pre-Release Builds</a>
-                            </li>
                         </ul>
 
                     </div>
@@ -390,11 +388,11 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <h2>Releases</h2>
                         </div>
                         <ul class="list-unstyled simple-list">
-                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-ttf.zip">TrueType Outlines (.ttf)</a>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.015/Hack-v2_015-ttf.zip">TrueType Outlines (.ttf)</a>
                             </li>
-                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-otf.zip">CFF Outlines (.otf)</a>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.015/Hack-v2_015-otf.zip">CFF Outlines (.otf)</a>
                             </li>
-                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.013/Hack-v2_013-webfonts.zip">Web Font Archive</a>
+                            <li class="type-lato list-font-size"><a href="https://github.com/chrissimpkins/Hack/releases/download/v2.015/Hack-v2_015-webfonts.zip">Web Font Archive</a>
                             </li>
                         </ul>
 
@@ -410,7 +408,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
 
     <div class="copyright-section type-lato">
-        <p>The font playground was developed by <a href="http://www.jublo.net/">Jublo Solutions</a> and is using the <a href="http://ace.c9.io/">ACE Editor</a>.
+        <p>The font playground was developed by <a href="https://github.com/jublo">JM</a> (<a href="http://www.jublo.net/">Jublo Solutions</a>) and uses the <a href="http://ace.c9.io/">ACE Editor</a>.
         </p>
         <p>Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.
         </p>
