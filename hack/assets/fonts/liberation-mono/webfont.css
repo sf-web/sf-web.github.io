@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('LiberationMono-Regular-webfont.eot');
+    src: url('LiberationMono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationMono-Regular-webfont.woff') format('woff'),
+         url('LiberationMono-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('LiberationMono-Bold-webfont.eot');
+    src: url('LiberationMono-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationMono-Bold-webfont.woff') format('woff'),
+         url('LiberationMono-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('LiberationMono-Italic-webfont.eot');
+    src: url('LiberationMono-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationMono-Italic-webfont.woff') format('woff'),
+         url('LiberationMono-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('LiberationMono-BoldItalic-webfont.eot');
+    src: url('LiberationMono-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationMono-BoldItalic-webfont.woff') format('woff'),
+         url('LiberationMono-BoldItalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
