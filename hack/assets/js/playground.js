@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
     $('#theme')
     .val((localStorage && localStorage.playgroundEditorTheme)
         ? localStorage.playgroundEditorTheme
-        : 'ace/theme/monokai'
+        : 'ace/theme/eclipse'
     )
     .change(function (ev) {
         var theme = $(this).val(),
