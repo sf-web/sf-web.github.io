@@ -1,5 +1,9 @@
 /* Add here any styles applying to the Playground page */
 
+ul.nav a i.fa:last-child {
+	margin-left: .5em;
+}
+
 .styled-select {
 	position: relative;
 	display: inline-block;
