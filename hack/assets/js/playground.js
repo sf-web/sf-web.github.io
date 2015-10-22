@@ -102,6 +102,10 @@ jQuery(document).ready(function() {
             editors[i].setOptions({
                 fontSize: size + "pt"
             });
+            // clean view for huge sizes
+            editors[i].renderer.setShowGutter(size < 100);
+            editors[i].setDisplayIndentGuides(size < 50);
+            editors[i].renderer.setScrollMargin(size < 100 ? 20 : 0);
         }
     })
     .trigger("change");
