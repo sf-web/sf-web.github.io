@@ -4,6 +4,10 @@ ul.nav a i.fa:last-child {
 	margin-left: .5em;
 }
 
+a#exit-fullscreen {
+	display: none;
+}
+
 .styled-select {
 	position: relative;
 	display: inline-block;
@@ -33,7 +37,7 @@ html.wf-loading .styled-select.face {
 	opacity: 0;
 }
 
-.styled-select select#size {
+.styled-select select.size {
 	min-width: 160%;
 }
 
@@ -45,11 +49,80 @@ html.wf-loading .styled-select.face {
 	font-size: 16px;
 }
 
-#playground {
+.playground {
 	text-align: left;
 	min-height: 15em;
 }
 
 .margin-bottom-25 {
 	margin-bottom: 25px;
+}
+
+body.fullscreen nav,
+body.fullscreen #footer-v3,
+body.fullscreen .copyright-section {
+	display: none;
+}
+
+body.fullscreen form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/patterns/5.png) repeat fixed;
+	padding: .5em 1em;
+}
+
+body.fullscreen a#exit-fullscreen {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 1.5em;
+	font-size: 2em;
+	z-index: 1;
+}
+
+.editor2,
+body.fullscreen .more-info,
+#playground2 {
+	display: none;
+}
+
+body.fullscreen .styled-select.face.editor2 {
+	display: inline-block;
+}
+
+body.fullscreen .styled-select.face.editor1 span:before {
+	content: "◄ ";
+}
+
+body.fullscreen .styled-select.face.editor2 span:before {
+	content: "► ";
+}
+
+body.fullscreen .container.editor2,
+body.fullscreen #playground2 {
+	display: block;
+}
+
+body.fullscreen .margin-bottom-25 {
+	margin-bottom: 0;
+}
+
+body.fullscreen #editors {
+	position: absolute;
+	top: 5em;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+body.fullscreen pre.playground {
+	margin-left: 0;
+	width: 100%;
+	height: 50%;
+	margin: 0;
 }
