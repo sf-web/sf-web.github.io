@@ -100,7 +100,7 @@ jQuery(document).ready(function() {
         $(this).parent().find("span").text(size);
         for (var i = 1; i < editors.length; i++) {
             editors[i].setOptions({
-                fontSize: size + "pt"
+                fontSize: size + "px"
             });
             // clean view for huge sizes
             editors[i].renderer.setShowGutter(size < 100);
