@@ -4,7 +4,7 @@ ul.nav a i.fa:last-child {
 	margin-left: .5em;
 }
 
-a#exit-fullscreen {
+#fullscreen-controls {
 	display: none;
 }
 
@@ -76,13 +76,18 @@ body.fullscreen form {
 	padding: .5em 1em;
 }
 
-body.fullscreen a#exit-fullscreen {
+body.fullscreen #fullscreen-controls {
 	display: block;
-	position: absolute;
-	top: 0;
-	right: 1.5em;
+	float: right;
 	font-size: 2em;
 	z-index: 1;
+	position: relative;
+	top: -.2em;
+}
+
+body.fullscreen #fullscreen-controls a {
+	display: inline-block;
+	margin-left: .5em;
 }
 
 .editor2,
@@ -96,11 +101,19 @@ body.fullscreen .styled-select.face.editor2 {
 }
 
 body.fullscreen .styled-select.face.editor1 span:before {
-	content: "◄ ";
+	content: "▲ ";
 }
 
 body.fullscreen .styled-select.face.editor2 span:before {
-	content: "► ";
+	content: "▼ ";
+}
+
+body.vertical.fullscreen .styled-select.face.editor1 span:before {
+	content: "◀ ";
+}
+
+body.vertical.fullscreen .styled-select.face.editor2 span:before {
+	content: "▶ ";
 }
 
 body.fullscreen .container.editor2,
@@ -121,8 +134,31 @@ body.fullscreen #editors {
 }
 
 body.fullscreen pre.playground {
-	margin-left: 0;
 	width: 100%;
 	height: 50%;
 	margin: 0;
+	padding: 0;
+	min-height: 0;
+}
+
+body.vertical.fullscreen pre.playground {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+@media screen and (max-width: 767px) {
+	.styled-select {
+		min-height: 1.5em;
+	}
+	.styled-select select {
+		font-size: 12px;
+		height: 25px;
+	}
+	.styled-select span {
+		font-size: 12px;
+	}
+	body.fullscreen #fullscreen-controls {
+		font-size: 1.5em;
+	}
 }

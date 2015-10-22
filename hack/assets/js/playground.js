@@ -134,6 +134,14 @@ jQuery(document).ready(function() {
             $(document.body).toggleClass("fullscreen");
             $(window).trigger("resize");
         });
+        $("a#toggle-alignment").click(function (e) {
+            e.preventDefault();
+            $(document.body).toggleClass("vertical");
+            $(this).find("i.fa").toggleClass("fa-arrows-h");
+            for (var i = 1; i < editors.length; i++) {
+                editors[i].resize();
+            }
+        });
         $(window).resize(function () {
             $("#editors").css("top", $("#editor-controls").height() + 5);
         });
