@@ -52,6 +52,7 @@ html.wf-loading .styled-select.face {
 .playground {
 	text-align: left;
 	min-height: 15em;
+	line-height: 1.33;
 }
 
 .margin-bottom-25 {
