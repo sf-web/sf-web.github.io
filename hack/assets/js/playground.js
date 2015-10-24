@@ -135,6 +135,9 @@ jQuery(document).ready(function() {
     (function () {
         $("a#enter-fullscreen, a#exit-fullscreen").click(function (e) {
             e.preventDefault();
+            if ($(window).height() < $(window).width()) {
+                $(document.body).addClass("vertical");
+            }
             $(document.body).toggleClass("fullscreen");
             $(window).trigger("resize");
         });
