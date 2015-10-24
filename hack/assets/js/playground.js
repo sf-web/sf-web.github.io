@@ -91,11 +91,13 @@ jQuery(document).ready(function() {
         }
 
         // update more info text
-        var href = $(this).find("option:selected").attr("data-href");
-        $("#moreinfo")
-            .find("span").text(face).end()
-            .find("a").prop("href", href).text(href).end()
-            .css("visibility", "visible");
+        if (editorIndex === 1) {
+            var href = $(this).find("option:selected").attr("data-href");
+            $("#moreinfo")
+                .find("span").text(face).end()
+                .find("a").prop("href", href).text(href).end()
+                .css("visibility", "visible");
+        }
     });
     $("select.face").trigger("change");
     $("select.size").change(function (ev) {
