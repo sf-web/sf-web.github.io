@@ -53,7 +53,7 @@ The #page-top ID is part of the scrolling feature.
 The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
 -->
 
-<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery dark">
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="dark">
     <!--=== Header ===-->
     <nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -79,6 +79,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li class="home">
                             <a href="./">&laquo;&nbsp;back to main page</a>
                         </li>
+                        <li>
+                            <a href="#" id="enter-fullscreen">Compare side-by-side <i class="fa fa-arrows-alt"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -96,15 +99,26 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 <div class="title-v1">
                     <h2>Font playground</h2>
                     <p class="margin-bottom-50">
-                        See Hack (and other monospaced fonts) live in action!<br>
-                        Install your fonts locally and they will show up in the dropdown selections.<br>
-                        Use the dropdown options to modify the typeface, text size, language, and highlighter scheme.
+                        See Hack (and other monospaced fonts) live in action!
+                        <br> Install your fonts locally and they will show up in the dropdown selections.
+                        <br> Use the dropdown options to modify the typeface, text size, language, and highlighter scheme.
                     </p>
                     <form>
-                        <div class="margin-bottom-25">
-                            <div class="styled-select face">
+                        <div id="editor-controls" class="margin-bottom-25">
+                            <div id="fullscreen-controls">
+                                <a href="#" id="alignment-horizontal" title="Use horizontal alignment">
+                                    <i class="fa fa-fw"></i>
+                                </a>
+                                <a href="#" id="alignment-vertical" title="Use vertical alignment">
+                                    <i class="fa fa-fw"></i>
+                                </a>
+                                <a href="#" id="exit-fullscreen" title="Close side-by-side comparison">
+                                    <i class="fa fa-close"></i>
+                                </a>
+                            </div>
+                            <div class="styled-select face editor1">
                                 <span></span>
-                                <select id="face" size="1">
+                                <select class="face" size="1">
                                     <option data-href="http://sourcefoundry.org/hack/" selected>Hack</option>
                                     <option data-href="https://www.microsoft.com/typography/fonts/family.aspx?FID=11">Andale Mono</option>
                                     <option data-href="http://www.marksimonson.com/fonts/view/anonymous-pro" data-webfont>Anonymous Pro</option>
@@ -138,31 +152,41 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <option data-href="http://www.paratype.com/public/" data-webfont>PT Mono</option>
                                     <option data-href="https://www.google.com/fonts/specimen/Roboto+Mono" data-webfont>Roboto Mono</option>
                                     <option data-href="https://en.wikipedia.org/wiki/Segoe#Segoe_UI">Segoe UI Mono</option>
-                                    <option data-href="http://adobe-fonts.github.io/source-code-pro/" data-webfont>Source Code Pro</option>
+                                    <option data-href="http://adobe-fonts.github.io/source-code-pro/" data-webfont data-selected-editor2>Source Code Pro</option>
                                     <option data-href="http://terminus-font.sourceforge.net/">Terminus</option>
                                     <option data-href="http://font.ubuntu.com/" data-webfont>Ubuntu Mono</option>
                                 </select>
                             </div>
-                            <div class="styled-select">
+                            <div class="styled-select face editor2">
                                 <span></span>
-                                <select id="size" size="1">
+                                <select class="face" size="1"></select>
+                            </div>
+                            <div class="styled-select">
+                                <span>Size</span>
+                                <select class="size" size="1">
                                     <option>6</option>
                                     <option>8</option>
                                     <option>9</option>
-                                    <option selected>10</option>
+                                    <option>10</option>
                                     <option>11</option>
-                                    <option>12</option>
+                                    <option selected>12</option>
                                     <option>14</option>
                                     <option>16</option>
                                     <option>20</option>
                                     <option>36</option>
                                     <option>48</option>
                                     <option>72</option>
+                                    <option>150</option>
+                                    <option>250</option>
+                                    <option>330</option>
+                                    <option>500</option>
+                                    <option>660</option>
+                                    <option>1000</option>
                                 </select>
                             </div>
                             <div class="styled-select">
-                                <span></span>
-                                <select id="mode" size="1">
+                                <span>Language</span>
+                                <select class="mode" size="1">
                                     <option value="ace/mode/abap">Abap</option>
                                     <option value="ace/mode/actionscript">ActionScript</option>
                                     <option value="ace/mode/ada">ADA</option>
@@ -263,8 +287,8 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </select>
                             </div>
                             <div class="styled-select">
-                                <span></span>
-                                <select id="theme" size="1">
+                                <span>Syntax highlighting</span>
+                                <select class="theme" size="1">
                                     <optgroup label="Light">
                                         <option value="ace/theme/chrome">Chrome</option>
                                         <option value="ace/theme/clouds">Clouds</option>
@@ -292,7 +316,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                         <option value="ace/theme/merbivore">Merbivore</option>
                                         <option value="ace/theme/merbivore_soft">Merbivore Soft</option>
                                         <option value="ace/theme/mono_industrial">Mono Industrial</option>
-                                        <option value="ace/theme/monokai" >Monokai</option>
+                                        <option value="ace/theme/monokai">Monokai</option>
                                         <option value="ace/theme/pastel_on_dark">Pastel on dark</option>
                                         <option value="ace/theme/solarized_dark">Solarized Dark</option>
                                         <option value="ace/theme/terminal">Terminal</option>
@@ -306,23 +330,23 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </select>
                             </div>
                         </div>
-                        <div class="margin-bottom-25">
+                        <div class="margin-bottom-25 more-info">
                             <p id="moreinfo" style="visibility: hidden">
-                                More info about the “<span></span>” font:<br>
+                                More info about the “<span></span>” font:
+                                <br>
                                 <a href="#"></a>
                             </p>
                         </div>
-                        <div class="container">
-                            <pre class="col-md-8 col-md-offset-2" id="playground"
->function foo(items) {
+                        <div id="editors">
+                            <pre class="col-md-8 col-md-offset-2 playground" id="playground1">function foo(items) {
     var x = "All of this is syntax highlighted";
     return x;
-}</pre>
+}</pre><pre class="playground" id="playground2"></pre>
                         </div>
                         <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script>
                     </form>
                     <p class="margin-bottom-50" style="font-size: 1em">
-                        Problems with the Font Playground?  <a href="https://github.com/source-foundry/source-foundry.github.io/issues/new?title=Playground:%20">Issue reporting is available here</a>.
+                        Problems with the Font Playground? <a href="https://github.com/source-foundry/source-foundry.github.io/issues/new?title=Playground:%20">Issue reporting is available here</a>.
                     </p>
                 </div>
             </div>
@@ -407,11 +431,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
 
     <div class="copyright-section type-lato">
-        <p>The Font Playground was developed by <a href="https://github.com/jublo">JM</a> (<a href="http://www.jublo.net/">Jublo Solutions</a>) and uses the <a href="http://ace.c9.io/">ACE Editor</a>.
+        <p>The Font Playground was developed by <a href="https://github.com/jublo">JM</a> (<a href="http://www.jublo.net/">Jublo Solutions</a>)
+            and uses the <a href="http://ace.c9.io/">ACE Editor</a>.
         </p>
         <p>Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.
         </p>
-        <p>Web and font hosting by <a href="https://github.com">Github</a> | Site CDN by <a href="https://www.cloudflare.com/">Cloudflare</a> | Font CDN by <a href="https://github.com/jsdelivr/jsdelivr">jsDelivr</a></p>
+        <p>Web and font hosting by <a href="https://github.com">Github</a> | Site CDN by <a href="https://www.cloudflare.com/">Cloudflare</a>            | Font CDN by <a href="https://github.com/jsdelivr/jsdelivr">jsDelivr</a></p>
         <ul class="social-icons">
             <li>
                 <a href="https://twitter.com/csimpkins" data-original-title="Twitter" class="social_twitter rounded-x"></a>
@@ -428,17 +453,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/pace/pace.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery.parallax.js"></script>
     <script type="text/javascript" src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <!-- JS Page Level-->
     <script type="text/javascript" src="assets/js/one.app.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pace-loader.js"></script>
     <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script type="text/javascript" src="assets/js/playground.js"></script>
     <script type="text/javascript">
-    jQuery(document).ready(function() {
+        jQuery(document).ready(function() {
         App.init();
         App.initParallaxBg();
     });
