@@ -41,8 +41,11 @@ jQuery(document).ready(function() {
     $("#moreinfo a").prop("target", "_blank");
 
     // clone font face control
+    var $face_select = $(".styled-select.face.editor1 select")
+        .clone();
+    $face_select.val($face_select.find("option[data-selected-editor2]").val());
     $(".styled-select.face.editor2 select")
-        .replaceWith($(".styled-select.face.editor1 select").clone());
+        .replaceWith($face_select);
 
     // sync editors
     editors[2].setSession(editors[1].getSession());
