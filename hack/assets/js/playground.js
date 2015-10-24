@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
             }
         });
         $(window).resize(function () {
-            $("#editors").css("top", $("#editor-controls").height() + 5);
+            $("#editors").css("top", $("#editor-controls").outerHeight() + 5);
         });
     })();
 });
