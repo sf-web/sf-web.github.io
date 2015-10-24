@@ -141,10 +141,14 @@ jQuery(document).ready(function() {
             $(document.body).toggleClass("fullscreen");
             $(window).trigger("resize");
         });
-        $("a#toggle-alignment").click(function (e) {
+        $("a#alignment-horizontal, a#alignment-vertical").click(function (e) {
             e.preventDefault();
-            $(document.body).toggleClass("vertical");
-            $(this).find("i.fa").toggleClass("fa-arrows-h");
+            if ($(this).attr("id") === "alignment-vertical") {
+                $(document.body).addClass("vertical");
+            } else {
+                $(document.body).removeClass("vertical");
+            }
+            $(window).trigger("resize");
             for (var i = 1; i < editors.length; i++) {
                 editors[i].resize();
             }
