@@ -100,7 +100,6 @@ jQuery(document).ready(function() {
     $("select.face").trigger("change");
     $("select.size").change(function (ev) {
         var size = $(this).val();
-        $(this).parent().find("span").text(size);
         for (var i = 1; i < editors.length; i++) {
             editors[i].setOptions({
                 fontSize: size + "px"
@@ -113,16 +112,12 @@ jQuery(document).ready(function() {
     })
     .trigger("change");
     $("select.mode").change(function (ev) {
-        var mode = $(this).val(),
-            displayMode = $(this).find("option:selected").text();
-        $(this).parent().find("span").text(displayMode);
+        var mode = $(this).val();
         editors[1].getSession().setMode(mode);
     })
     .trigger("change");
     $("select.theme").change(function (ev) {
-        var theme = $(this).val(),
-            displayTheme = $(this).find("option:selected").text();
-        $(this).parent().find("span").text(displayTheme);
+        var theme = $(this).val();
         localStorage.playgroundEditorTheme = theme;
         for (var i = 1; i < editors.length; i++) {
             editors[i].setTheme(theme);
