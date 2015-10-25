@@ -338,10 +338,21 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             </p>
                         </div>
                         <div id="editors">
-                            <pre class="col-md-8 col-md-offset-2 playground" id="playground1">function foo(items) {
-    var x = "All of this is syntax highlighted";
-    return x;
-}</pre><pre class="playground" id="playground2"></pre>
+                            <pre class="col-md-8 col-md-offset-2 playground" id="playground1">Timer.prototype.applyEasing = function() {
+  var t = this.percentage;
+  if (this.easing === 'ease-in') {
+    return t * t;
+  } else if (this.easing === 'ease-out') {
+    return t * (2 - t);
+  } else if (this.easing === 'ease-in-out') {
+    if (t < 0.5) {
+      return 2 * t * t;
+    } else {
+      return -1 + (4 - 2 * t) * t;
+    }
+  }
+  return t; // default is linear.
+};</pre><pre class="playground" id="playground2"></pre>
                         </div>
                         <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script>
                     </form>
