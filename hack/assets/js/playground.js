@@ -127,7 +127,7 @@ jQuery(document).ready(function() {
     })
     .val((localStorage && localStorage.playgroundEditorTheme)
         ? localStorage.playgroundEditorTheme
-        : "ace/theme/eclipse"
+        : "ace/theme/tomorrow_night_bright"
     )
     .trigger("change");
 
