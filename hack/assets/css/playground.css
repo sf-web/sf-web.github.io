@@ -94,7 +94,9 @@ body.fullscreen #fullscreen-controls {
 }
 
 #fullscreen-controls a:hover,
-#fullscreen-controls a:focus {
+#fullscreen-controls a:focus,
+body.fullscreen #toggle-faces:hover,
+body.fullscreen #toggle-faces:focus {
 	opacity: 1;
 }
 
@@ -130,6 +132,7 @@ body.fullscreen #editor-controls {
 	padding-bottom: 3em;
 }
 
+#toggle-faces,
 .editor2,
 body.fullscreen .more-info,
 #playground2 {
@@ -140,8 +143,18 @@ body.fullscreen .styled-select.face {
 	color: #fff;
 	position: absolute;
 	bottom: 0;
-	right: .2em;
+	right: 2em;
 	margin-right: 50%;
+}
+
+body.fullscreen #toggle-faces {
+	display: inline-block;
+	position: absolute;
+	bottom: .1em;
+	left: 50%;
+	margin-left: -.65em;
+	font-size: 2em;
+	opacity: .5;
 }
 
 body.fullscreen .styled-select.face.editor2 {
@@ -149,7 +162,7 @@ body.fullscreen .styled-select.face.editor2 {
 	right: auto;
 	margin-right: auto;
 	margin-left: 50%;
-	left: .2em;
+	left: 2em;
 }
 
 body.fullscreen .styled-select.face.editor1 span:before {
