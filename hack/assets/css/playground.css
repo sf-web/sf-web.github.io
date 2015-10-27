@@ -1,18 +1,27 @@
 /* Add here any styles applying to the Playground page */
 
+ul.nav a i.fa:last-child {
+	margin-left: .5em;
+}
+
+#fullscreen-controls {
+	display: none;
+}
+
 .styled-select {
 	position: relative;
 	display: inline-block;
 	min-height: 2em;
 	overflow: hidden;
-	background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMzUwIj48cG9seWdvbiBwb2ludHM9IjEwMCAwIDIwMCAxNTAgMCAxNTAiIGZpbGw9IiM3MmMwMmMiLz48cG9seWdvbiBwb2ludHM9IjEwMCAzNTAgMjAwIDIwMCAwIDIwMCIgZmlsbD0iIzcyYzAyYyIvPjwvc3ZnPgo=) no-repeat 97% 50%;
+	background: rgba(255, 255, 255, .3) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMzUwIj48cG9seWdvbiBwb2ludHM9IjEwMCAwIDIwMCAxNTAgMCAxNTAiIGZpbGw9IiM3MmMwMmMiLz48cG9seWdvbiBwb2ludHM9IjEwMCAzNTAgMjAwIDIwMCAwIDIwMCIgZmlsbD0iIzcyYzAyYyIvPjwvc3ZnPgo=) no-repeat 97% 50%;
 	background-size: 1em 50%;
 	padding-right: 2em;
 	margin-bottom: .5em;
+	color: #999;
 }
 
 html.wf-loading .styled-select.face {
-	background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSczMnB4JyBoZWlnaHQ9JzMycHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLXJpbmciPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlLWRhc2hhcnJheT0iMTYzLjM2MjgxNzk4NjY2OTI2IDg3Ljk2NDU5NDMwMDUxNDIiIHN0cm9rZT0iIzc0YmUzOSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIyMCI+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHZhbHVlcz0iMCA1MCA1MDsxODAgNTAgNTA7MzYwIDUwIDUwOyIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMHMiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L3N2Zz4=) no-repeat 97% 50%;
+	background: rgba(255, 255, 255, .3) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSczMnB4JyBoZWlnaHQ9JzMycHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLXJpbmciPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlLWRhc2hhcnJheT0iMTYzLjM2MjgxNzk4NjY2OTI2IDg3Ljk2NDU5NDMwMDUxNDIiIHN0cm9rZT0iIzc0YmUzOSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIyMCI+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHZhbHVlcz0iMCA1MCA1MDsxODAgNTAgNTA7MzYwIDUwIDUwOyIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMHMiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L3N2Zz4=) no-repeat 97% 50%;
 	background-size: 1.5em 50%;
 }
 
@@ -29,7 +38,7 @@ html.wf-loading .styled-select.face {
 	opacity: 0;
 }
 
-.styled-select select#size {
+.styled-select select.size {
 	min-width: 160%;
 }
 
@@ -41,11 +50,167 @@ html.wf-loading .styled-select.face {
 	font-size: 16px;
 }
 
-#playground {
+.playground {
 	text-align: left;
-	min-height: 15em;
+	min-height: 22.5em;
+	line-height: 1.33;
 }
 
 .margin-bottom-25 {
 	margin-bottom: 25px;
+}
+
+body.fullscreen nav,
+body.fullscreen #footer-v3,
+body.fullscreen .copyright-section {
+	display: none;
+}
+
+body.fullscreen form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/patterns/5.png) repeat fixed;
+	padding: .5em 1em;
+}
+
+body.fullscreen #fullscreen-controls {
+	display: block;
+	float: right;
+	font-size: 2em;
+	z-index: 1;
+	position: relative;
+	top: -.2em;
+}
+
+#fullscreen-controls a {
+	display: inline-block;
+	margin-left: .5em;
+	opacity: .5;
+}
+
+#fullscreen-controls a:hover,
+#fullscreen-controls a:focus {
+	opacity: 1;
+}
+
+a#alignment-horizontal,
+a#alignment-vertical {
+	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDggOCIgaGVpZ2h0PSI4IiB3aWR0aD0iOCI+PHJlY3QgeT0iMCIgeD0iMCIgaGVpZ2h0PSIzIiB3aWR0aD0iOCIgZmlsbD0iIzcyYzAyYyIvPjxyZWN0IHk9IjUiIHg9IjAiIGhlaWdodD0iMyIgd2lkdGg9IjgiIGZpbGw9IiM3MmMwMmMiLz48L3N2Zz4K);
+	background-size: 75%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+a#alignment-vertical {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDggOCIgaGVpZ2h0PSI4IiB3aWR0aD0iOCI+PHJlY3QgeT0iMCIgeD0iMCIgaGVpZ2h0PSI4IiB3aWR0aD0iMyIgZmlsbD0iIzcyYzAyYyIvPjxyZWN0IHk9IjAiIHg9IjUiIGhlaWdodD0iOCIgd2lkdGg9IjMiIGZpbGw9IiM3MmMwMmMiLz48L3N2Zz4K);
+}
+
+body.fullscreen a#alignment-horizontal,
+body.vertical.fullscreen a#alignment-vertical {
+	opacity: 1;
+}
+
+body.vertical.fullscreen a#alignment-horizontal {
+	opacity: .5;
+}
+
+body.vertical.fullscreen a#alignment-horizontal:hover,
+body.vertical.fullscreen a#alignment-horizontal:focus {
+	opacity: 1;
+}
+
+body.fullscreen #editor-controls {
+	text-align: left;
+	position: relative;
+	padding-bottom: 3em;
+}
+
+.editor2,
+body.fullscreen .more-info,
+#playground2 {
+	display: none;
+}
+
+body.fullscreen .styled-select.face {
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: .2em;
+	margin-right: 50%;
+}
+
+body.fullscreen .styled-select.face.editor2 {
+	display: inline-block;
+	right: auto;
+	margin-right: auto;
+	margin-left: 50%;
+	left: .2em;
+}
+
+body.fullscreen .styled-select.face.editor1 span:before {
+	content: "▲ ";
+}
+
+body.fullscreen .styled-select.face.editor2 span:before {
+	content: "▼ ";
+}
+
+body.vertical.fullscreen .styled-select.face.editor1 span:before {
+	content: "◀ ";
+}
+
+body.vertical.fullscreen .styled-select.face.editor2 span:before {
+	content: "▶ ";
+}
+
+body.fullscreen .container.editor2,
+body.fullscreen #playground2 {
+	display: block;
+}
+
+body.fullscreen .margin-bottom-25 {
+	margin-bottom: 0;
+}
+
+body.fullscreen #editors {
+	position: absolute;
+	top: 5em;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+body.fullscreen pre.playground {
+	width: 100%;
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	min-height: 0;
+}
+
+body.vertical.fullscreen pre.playground {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+@media screen and (max-width: 767px) {
+	.styled-select {
+		min-height: 1.5em;
+	}
+	.styled-select select {
+		font-size: 12px;
+		height: 25px;
+	}
+	.styled-select span {
+		font-size: 12px;
+	}
+	body.fullscreen #fullscreen-controls {
+		font-size: 1.5em;
+	}
 }
