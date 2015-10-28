@@ -153,6 +153,14 @@ jQuery(document).ready(function() {
                 editors[i].resize();
             }
         });
+        $("a#toggle-faces").click(function (e) {
+            e.preventDefault();
+            var $editor1 = $(".styled-select.face.editor1 select"),
+                $editor2 = $(".styled-select.face.editor2 select"),
+                face2 = $editor2.val();
+            $editor2.val($editor1.val()).trigger("change");
+            $editor1.val(face2).trigger("change");
+        });
         $(window).resize(function () {
             $("#editors").css("top", $("#editor-controls").outerHeight() + 5);
         });
