@@ -163,6 +163,9 @@ jQuery(document).ready(function() {
         });
         $(window).resize(function () {
             $("#editors").css("top", $("#editor-controls").outerHeight() + 5);
+            for (var i = 1; i < editors.length; i++) {
+                editors[i].renderer.onResize();
+            }
         });
     })();
 });
