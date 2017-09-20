@@ -50,6 +50,11 @@ html.wf-loading .styled-select.face {
 	font-size: 16px;
 }
 
+.styled-select option {
+	color: #000;
+	background: #ccc;
+}
+
 .playground {
 	text-align: left;
 	min-height: 22.5em;
