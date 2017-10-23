@@ -50,6 +50,11 @@ html.wf-loading .styled-select.face {
 	font-size: 16px;
 }
 
+.styled-select option {
+	color: #000;
+	background: #ccc;
+}
+
 .playground {
 	text-align: left;
 	min-height: 22.5em;
@@ -226,4 +231,9 @@ body.vertical.fullscreen pre.playground {
 	body.fullscreen #fullscreen-controls {
 		font-size: 1.5em;
 	}
+}
+
+.ace_content {
+	font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
+	text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
 }
