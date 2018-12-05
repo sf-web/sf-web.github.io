@@ -151,10 +151,10 @@
 
 <h2 id="about">About</h2>
 <p>Cinder is a clean, responsive theme for static documentation sites that are generated with <a href="https://github.com/mkdocs/mkdocs">MkDocs</a>. It's built on the <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3 framework</a> and includes pre-packaged:</p>
-<p><small><i class="fas fa-highlighter" style="color:#FA023C"></i> <strong><a href="https://highlightjs.org/">highlight.js v9.13.1</a> syntax highlighting with support for <a href="/specimen/#language-support">over 25 programming languages</a></strong></small></br>
+<p><small><i class="fas fa-highlighter" style="color:#FA023C"></i> <strong><a href="https://highlightjs.org/">highlight.js v9.13.1</a> syntax highlighting with support for <a href="./specimen#language-support">over 25 programming languages</a></strong></small></br>
 <small><i class="fab fa-font-awesome-alt" style="color:#FA023C"></i> <strong><a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome v5.5.0</a> icon support</strong></small></br>
-<small><i class="fas fa-font" style="color:#FA023C"></i> <strong><a href="/specimen/#typography">smashingly legible type scheme</a> to get your message out to your users</strong></small></p>
-<p>You are viewing the theme in action and can see a selection of the theme elements on the <a href="/specimen/">Specimen page</a>.</p>
+<small><i class="fas fa-font" style="color:#FA023C"></i> <strong><a href="./specimen#typography">smashingly legible type scheme</a> to get your message out to your users</strong></small></p>
+<p>You are viewing the theme in action and can see a selection of the theme elements on the <a href="./specimen/">Specimen page</a>.</p>
 <h2 id="install">Install</h2>
 <p><strong><em>Required</em></strong>: Python 2.7 or 3.4+</p>
 <h3 id="install-mkdocs-create-a-new-project">Install MkDocs &amp; Create a New Project</h3>
@@ -290,6 +290,7 @@ nav:
     custom_dir: [custom dir]</code></pre>
 
 <p>Refer to <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">MkDocs Documentation - Using the theme custom_dir</a> for more information.</p>
+<p>Use the following examples as reference. You can put your own <a href="http://jinja.pocoo.org/">Jinja2</a> within the blocks. More information can be found in <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#overriding-template-blocks">MkDocs Documentation - Overriding Template Blocks</a>.</p>
 <h4 id="adding-extra-html-to-the-head-tag">Adding extra HTML to the head tag</h4>
 <p>Append to <code>main.html</code>:</p>
 <pre><code class="html">{% block extrahead %}
@@ -304,7 +305,7 @@ nav:
 &lt;p&gt;{% if config.copyright %}
       &lt;small&gt;{{ config.copyright }}&lt;br&gt;&lt;/small&gt;
 {% endif %}
-&lt;small&gt;Documentation built with &lt;a href=&quot;http://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt; and &lt;a href=&quot;https://sourcefoundry.org/cinder/&quot;&gt;Cinder theme.&lt;/a&gt;&lt;/small&gt;
+&lt;small&gt;Documentation built with &lt;a href=&quot;http://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt;.&lt;/small&gt;
 {% if page.meta.revision_date %}
       &lt;small&gt;&lt;br&gt;&lt;i&gt;Updated {{ page.meta.revision_date }}&lt;/i&gt;&lt;/small&gt;
 {% endif %}
@@ -312,7 +313,7 @@ nav:
 {% endblock %}
 </code></pre>
 
-<p>More information can be found in <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#overriding-template-blocks">MkDocs Documentation - Overriding Template Blocks</a>.</p>
+<p><code>page.meta.revision_date</code> can be set by using <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data">meta-data (front-matter)</a> at the beginning of your Markdown document or using <a href="https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin">mkdocs-git-revision-date-plugin</a>.</p>
 <h3 id="github-or-bitbucket-repository-link">Github or Bitbucket Repository Link</h3>
 <p>Include the <code>repo_url</code> field and define it with your repository URL:</p>
 <pre><code class="yaml">site_name: [YOURPROJECT]
@@ -397,5 +398,5 @@ nav:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2018-12-05 03:21:18
+Build Date UTC : 2018-12-05 23:10:10
 -->
