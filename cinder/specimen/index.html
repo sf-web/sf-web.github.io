@@ -4,27 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean, responsive theme for static documentation websites that are generated with MkDocs"> 
+    <meta name="author" content="Christopher Simpkins"> 
     <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title></title>
+    
+    <title>Specimen - Cinder</title>
+    
 
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/highlight.css">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.min.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -34,6 +38,8 @@
     </script>
 
     
+
+     
 </head>
 
 <body>
@@ -79,21 +85,21 @@
             <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fa fa-search"></i> Search
+                            <i class="fas fa-search"></i> Search
                         </a>
                     </li>
                     <li >
                         <a rel="next" href="..">
-                            <i class="fa fa-arrow-left"></i> Previous
+                            <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li class="disabled">
                         <a rel="prev" >
-                            Next <i class="fa fa-arrow-right"></i>
+                            Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/chrissimpkins/cinder/edit/master/docs/specimen.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/chrissimpkins/cinder/edit/master/docs/specimen.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -101,6 +107,7 @@
 </div>
 
     <div class="container">
+        
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
@@ -138,6 +145,9 @@
                 
             <li class="second-level"><a href="#block-level-buttons">Block Level Buttons</a></li>
                 
+        <li class="first-level "><a href="#alerts">Alerts</a></li>
+        <li class="first-level "><a href="#callouts">Callouts</a></li>
+        <li class="first-level "><a href="#admonitions">Admonitions</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -223,24 +233,73 @@
 <p>This is an example of inline code <code>#import requests</code></p>
 <h3>Preformatted Code Blocks <small>with Syntax Highlighting</small></h3>
 
-<pre><code class="python">def convert_markdown(markdown_source, config, site_navigation=None):
-    """
-    Convert the Markdown source file to HTML as per the config and
-    site_navigation. Return a tuple of the HTML as a string, the parsed table
-    of contents, and a dictionary of any metadata that was specified in the
-    Markdown file.
+<pre><code class="python">def request(method, url, **kwargs):
+    """Constructs and sends a :class:`Request <Request>`.
+    Usage::
+      >>> import requests
+      >>> req = requests.request('GET', 'https://httpbin.org/get')
+      <Response [200]>
     """
 
-    extensions = [
-        RelativePathExtension(site_navigation, config['strict'])
-    ] + config['markdown_extensions']
+    # By using the 'with' statement we are sure the session is closed, thus we
+    # avoid leaving sockets open which can trigger a ResourceWarning in some
+    # cases, and look like a memory leak in others.
+    with sessions.Session() as session:
+        return session.request(method=method, url=url, **kwargs)
 
-    return utils.convert_markdown(
-        markdown_source=markdown_source,
-        extensions=extensions,
-        extension_configs=config['mdx_configs']
-    )
+def get(url, params=None, **kwargs):
+    r"""Sends a GET request.
+    :param url: URL for the new :class:`Request` object.
+    :param params: (optional) Dictionary, list of tuples or bytes to send
+        in the body of the :class:`Request`.
+    :param \*\*kwargs: Optional arguments that ``request`` takes.
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
+    """
+
+    kwargs.setdefault('allow_redirects', True)
+    return request('get', url, params=params, **kwargs)
 </code></pre>
+
+<div id="language-support"></div>
+
+<p><small>(Source code sample from the Python <a href="https://github.com/requests/requests">requests library</a>, <a href="https://github.com/requests/requests/blob/master/LICENSE">Apache License, v2.0</a>)</small></p>
+<p>Syntax highlighting support is available for the following languages:</p>
+<ul>
+<li>Apache</li>
+<li>Bash</li>
+<li>C#</li>
+<li>C++</li>
+<li>CSS</li>
+<li>CoffeeScript</li>
+<li>Diff</li>
+<li>Go</li>
+<li>HTML/XML</li>
+<li>HTTP</li>
+<li>Ini, TOML</li>
+<li>JSON</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>Makefile</li>
+<li>Markdown</li>
+<li>Nginx</li>
+<li>Objective-C</li>
+<li>PHP</li>
+<li>Perl</li>
+<li>Properties</li>
+<li>Python</li>
+<li>R</li>
+<li>Ruby</li>
+<li>Rust</li>
+<li>SQL</li>
+<li>Shell Session</li>
+<li>Swift</li>
+<li>YAML</li>
+</ul>
+<div class="bs-callout bs-callout-info">
+  <h4>Note</h4>
+  Include source code formatted in <a href="https://github.github.com/gfm/#fenced-code-blocks" class="alert-link">Github-flavored Markdown fenced code blocks</a> with an <a href="https://github.github.com/gfm/#info-string" class="alert-link">info string</a> that defines the supported programming language to automate syntax highlighting when your site is built.
+</div>
 
 <h2 id="tables">Tables</h2>
 <h3 id="striped-table">Striped Table</h3>
@@ -355,27 +414,144 @@
 
 <h3 id="block-level-buttons">Block Level Buttons</h3>
 <p><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button></p></div>
+<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button></p>
+<h2 id="alerts">Alerts</h2>
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+
+<h2 id="callouts">Callouts</h2>
+<div class="bs-callout bs-callout-default">
+  <h4>Default Callout</h4>
+  This is a default callout.
+</div>
+
+<div class="bs-callout bs-callout-primary">
+  <h4>Primary Callout</h4>
+  This is a primary callout.
+</div>
+
+<div class="bs-callout bs-callout-success">
+  <h4>Success Callout</h4>
+  This is a success callout.
+</div>
+
+<div class="bs-callout bs-callout-info">
+  <h4>Info Callout</h4>
+  This is an info callout.
+</div>
+
+<div class="bs-callout bs-callout-warning">
+  <h4>Warning Callout</h4>
+  This is a warning callout.
+</div>
+
+<div class="bs-callout bs-callout-danger">
+  <h4>Danger Callout</h4>
+  This is a danger callout.
+</div>
+
+<h2 id="admonitions">Admonitions</h2>
+<p>The following admonitions are formatted like the callouts above but can be implemented in Markdown when you include the <code>admonition</code> Markdown extension in your <code>mkdocs.yml</code> file.  </p>
+<p>Add the following setting to <code>mkdocs.yml</code>:</p>
+<pre><code class="yaml">markdown_extensions:
+  - admonition
+</code></pre>
+
+<p>and then follow the instructions in <a href="https://python-markdown.github.io/extensions/admonition/">the extension documentation</a> to author admonitions in your documentation.</p>
+<p>Cinder currently supports <code>note</code>, <code>warning</code>, and <code>danger</code> admonition types.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+<p><pre><code>
+# this is a note
+def func(arg) {
+  # notable things are in here!
+  return None
+}
+</code></pre></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+<p><pre><code>
+# this is a warning
+def func(arg) {
+  # be careful!
+  return None
+}
+</code></pre></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+<p><pre><code>
+# this is dangerous
+def func(arg) {
+  # BOOM!
+  return None
+}
+</code></pre></p>
+</div></div>
+        
         
     </div>
 
     <footer class="col-md-12 text-center">
+        
         <hr>
         <p>
+        <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a><br></small>
+        
         <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
     </footer>
 
-    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
     <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
     var base_url = '..';
     </script>
-    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <!-- <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script> -->
     <script src="../js/base.js"></script>
-    <script src="../search/require.js"></script>
-    <script src="../search/search.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
         <div class="modal-dialog">
