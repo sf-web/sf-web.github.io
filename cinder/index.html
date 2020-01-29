@@ -136,6 +136,8 @@
         <li class="first-level "><a href="#site-customization">Site Customization</a></li>
             <li class="second-level"><a href="#syntax-highlighting-color-scheme">Syntax Highlighting Color Scheme</a></li>
                 
+            <li class="second-level"><a href="#syntax-highlighting-language-support">Syntax Highlighting Language Support</a></li>
+                
             <li class="second-level"><a href="#site-favicon">Site Favicon</a></li>
                 
             <li class="second-level"><a href="#add-your-own-css-stylesheets">Add Your Own CSS Stylesheets</a></li>
@@ -285,6 +287,19 @@ markdown_extensions:
 
 <p>and then rebuild your site.</p>
 <p>The color scheme name should match the base name of the highlightjs CSS file.  See the <a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles"><code>src/styles</code> directory of the highlightjs repository</a> for a complete list of these CSS paths.</p>
+<h3 id="syntax-highlighting-language-support">Syntax Highlighting Language Support</h3>
+<p>By default, Cinder supports the ~30 syntaxes listed under <code>common</code> in <a href="https://highlightjs.org/static/demo/">the documentation</a>.  You can broaden support to any of the over 130 highlightjs languages using definitions in your <code>mkdocs.yml</code> file.</p>
+<p>To add a new language, create a list of additional languages as a <code>hljs_languages</code> sub-field under the <code>theme</code> field in the <code>mkdocs.yml</code> file.  The definitions are formatted as a newline-delimited list with <code>-</code> characters.</p>
+<p>For example, to add support for the Julia and Perl languages, format your configuration file like this:</p>
+<pre><code class="yml">theme:
+  name: null
+  custom_dir: cinder
+  hljs_languages:
+      - julia
+      - perl
+</code></pre>
+
+<p>Use the base file name of the <a href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/">JavaScript files located in the CDN</a> for your syntax definitions.</p>
 <h3 id="site-favicon">Site Favicon</h3>
 <p>Create an <code>img</code> subdirectory in your <code>docs</code> directory and add a custom favicon.ico file.  See the <a href="https://www.mkdocs.org/#changing-the-favicon-icon">MkDocs documentation</a> for additional details.</p>
 <h3 id="add-your-own-css-stylesheets">Add Your Own CSS Stylesheets</h3>
@@ -399,7 +414,6 @@ nav:
     <script src="js/bootstrap-3.0.3.min.js"></script>
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     
     <script>var base_url = "."</script>
@@ -479,5 +493,5 @@ nav:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-01-29 03:21:21
+Build Date UTC : 2020-01-29 16:05:24
 -->
