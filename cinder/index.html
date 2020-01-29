@@ -22,7 +22,11 @@
     <link href="css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="css/base.min.css" rel="stylesheet">
     <link href="css/cinder.min.css" rel="stylesheet">
-    <link href="css/highlight.min.css" rel="stylesheet">
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -119,8 +123,6 @@
                 
             <li class="second-level"><a href="#install-the-cinder-theme">Install the Cinder Theme</a></li>
                 
-                <li class="third-level"><a href="#1-install-with-pip-recommended">1. Install with pip (Recommended)</a></li>
-                <li class="third-level"><a href="#2-manual-install">2. Manual Install</a></li>
         <li class="first-level "><a href="#test-with-a-local-site-server">Test with a Local Site Server</a></li>
         <li class="first-level "><a href="#create-your-site">Create Your Site</a></li>
             <li class="second-level"><a href="#add-content-with-markdown-syntax">Add Content with Markdown Syntax</a></li>
@@ -132,6 +134,8 @@
             <li class="second-level"><a href="#1-set-the-site_url-configuration-field">1. Set the site_url configuration field</a></li>
                 
         <li class="first-level "><a href="#site-customization">Site Customization</a></li>
+            <li class="second-level"><a href="#syntax-highlighting-color-scheme">Syntax Highlighting Color Scheme</a></li>
+                
             <li class="second-level"><a href="#site-favicon">Site Favicon</a></li>
                 
             <li class="second-level"><a href="#add-your-own-css-stylesheets">Add Your Own CSS Stylesheets</a></li>
@@ -158,48 +162,29 @@
 
 <h2 id="about">About</h2>
 <p>Cinder is a clean, responsive theme for static documentation sites that are generated with <a href="https://github.com/mkdocs/mkdocs">MkDocs</a>. It's built on the <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3 framework</a> and includes pre-packaged:</p>
-<p><small><i class="fas fa-highlighter" style="color:#FA023C"></i> <strong><a href="https://highlightjs.org/">highlight.js v9.13.1</a> syntax highlighting with support for <a href="./specimen#language-support">over 25 programming languages</a></strong></small></br>
+<p><small><i class="fas fa-highlighter" style="color:#FA023C"></i> <strong><a href="https://highlightjs.org/">highlight.js v9.18.0</a> syntax highlighting with support for <a href="https://highlightjs.org/static/demo/">185 languages (over 30 by default) and over 90 styles</a></strong></small></br>
 <small><i class="fab fa-font-awesome-alt" style="color:#FA023C"></i> <strong><a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome v5.12.0</a> icon support</strong></small></br>
 <small><i class="fas fa-font" style="color:#FA023C"></i> <strong><a href="./specimen#typography">smashingly legible type scheme</a> to get your message out to your users</strong></small></p>
 <p>You are viewing the theme in action and can see a selection of the theme elements on the <a href="./specimen/">Specimen page</a>.</p>
 <h2 id="install">Install</h2>
-<p><strong><em>Required</em></strong>: Python 2.7 or 3.4+</p>
+<p><strong><em>Required</em></strong>: Python 3.4+</p>
 <h3 id="install-mkdocs-create-a-new-project">Install MkDocs &amp; Create a New Project</h3>
 <p>If you haven't installed MkDocs yet, use the following command to install it:</p>
-<pre><code class="nohighlight">$ pip install mkdocs</code></pre>
+<pre><code class="shell">$ pip install mkdocs</code></pre>
 
 <p>Next, navigate to a clean directory and create a new MkDocs project with the following command:</p>
-<pre><code class="nohighlight">$ mkdocs new [projectname]</code></pre>
+<pre><code class="shell">$ mkdocs new [projectname]</code></pre>
 
 <p>Replace <code>[projectname]</code> with the name of your project (without the brackets).</p>
 <p>Then navigate to the root of your project directory:</p>
-<pre><code class="nohighlight">$ cd [projectname]</code></pre>
+<pre><code class="shell">$ cd [projectname]</code></pre>
 
 <h3 id="install-the-cinder-theme">Install the Cinder Theme</h3>
-<p>Choose one of the following install approaches:</p>
-<h4 id="1-install-with-pip-recommended">1. Install with pip (Recommended)</h4>
-<p>If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with the Python package manager <code>pip</code> using the command:</p>
-<pre><code class="nohighlight">$ pip install mkdocs-cinder</code></pre>
-
-<p>MkDocs projects use a YAML settings file called <code>mkdocs.yml</code>.  This is located in the root of your project directory after you use the <code>mkdocs new</code> command.  Open the file in a text editor and modify it to define Cinder in the <code>theme</code> setting as follows (note that this is case-sensitive):</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-nav:
-- Home: index.md</code></pre>
-
-<div class="bs-callout bs-callout-default">
-  <h4>Updates with <code>pip</code></h4>
-  <p>Update your pip-installed Cinder theme to new releases with the command:</p>
-  <p><code>$ pip install --upgrade mkdocs-cinder</code></p>
-  <p>Then rebuild the static files (see documentation below)</p>
-</div>
-
-<h4 id="2-manual-install">2. Manual Install</h4>
 <p>Download the Cinder theme archive by clicking the button below.</p>
-<p><a href="https://github.com/chrissimpkins/cinder/archive/v0.18.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a></p>
+<p><a href="https://github.com/chrissimpkins/cinder/archive/v0.19.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a></p>
 <p>Unpack the contents of the archive into a directory named <code>cinder</code> at the top level of your MkDocs project directory.</p>
 <p>Your project directory should now look like this:</p>
-<pre><code class="nohighlight">.
+<pre><code class="shell">.
 ├── mkdocs.yml
 ├── cinder
 │     ├── css
@@ -231,7 +216,7 @@ nav:
 
 <h2 id="test-with-a-local-site-server">Test with a Local Site Server</h2>
 <p>Use the following command to establish a local server for your site:</p>
-<pre><code class="nohighlight">$ mkdocs serve</code></pre>
+<pre><code class="shell">$ mkdocs serve</code></pre>
 
 <p>Then open your site in any browser at the URL <code>http://localhost:8000</code>.</p>
 <h2 id="create-your-site">Create Your Site</h2>
@@ -241,7 +226,9 @@ nav:
 <p>Add new pages to your site by creating a new Markdown file in your <code>docs</code> directory, then linking to the new page in the <code>mkdocs.yml</code> file.  This uses a <code>Page Name : Markdown file</code> syntax.</p>
 <p>For example, to add an About page using a Markdown file that is located on the path <code>docs/about.md</code>, you would format the <code>mkdocs.yml</code> file as follows:</p>
 <pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
+theme:
+  name: null
+  custom_dir: 'cinder'
 nav:
   - Home: index.md
   - About: about.md</code></pre>
@@ -249,7 +236,7 @@ nav:
 <p>Add additional pages to your site by repeating the above series of steps.</p>
 <h2 id="build-your-site">Build Your Site</h2>
 <p>Build your site files with the command:</p>
-<pre><code class="nohighlight">$ mkdocs build</code></pre>
+<pre><code class="shell">$ mkdocs build</code></pre>
 
 <p>Your site files are built in the <code>site</code> directory and are ready to use.  Deploy the contents of the <code>site</code> directory to your web server.</p>
 <h2 id="important-configuration-issues">Important Configuration Issues</h2>
@@ -261,18 +248,24 @@ nav:
 <p>You must set the <code>site_url</code> field in your <code>mkdocs.yml</code> file to the appropriate production URL in order to generate a valid <code>sitemap.xml</code> file (<a href="https://github.com/chrissimpkins/cinder/issues/80">issue #80</a>).</p>
 <p>Here is an example from the <a href="https://github.com/chrissimpkins/cinder/blob/master/mkdocs.yml">Cinder project <code>mkdocs.yml</code> file</a>:</p>
 <pre><code class="yml">site_name: Cinder
-site_url: &quot;https://sourcefoundry.org/cinder/&quot;
-theme:
-  name: null
-  custom_dir: 'cinder'
+site_url: https://sourcefoundry.org/cinder/
 site_author: Christopher Simpkins
 site_description: &quot;A clean, responsive theme for static documentation websites that are generated with MkDocs&quot;
 repo_url: &quot;https://github.com/chrissimpkins/cinder&quot;
 copyright: &quot;Cinder is licensed under the &lt;a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'&gt;MIT license&lt;/a&gt;&quot;
+
+theme:
+  name: null
+  custom_dir: cinder
+  colorscheme: github
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
 nav:
   - Home: index.md
-  - Specimen: 
-      - Specimen Source: specimen.md
+  - Specimen: specimen.md
+
 markdown_extensions:
   - admonition
 </code></pre>
@@ -280,15 +273,20 @@ markdown_extensions:
 <p>The <code>sitemap.xml</code> file will be located at <code>[SITE_URL]/sitemap.xml</code> when you push your site into the production environment.  During development the <code>sitemap.xml</code> file can be found at <code>http://127.0.0.1:8000/sitemap.xml</code>.</p>
 <h2 id="site-customization">Site Customization</h2>
 <p>The following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the <a href="https://github.com/mkdocs/mkdocs/blob/master/docs/user-guide/configuration.md">MkDocs Configuration documentation</a>.</p>
-<h3 id="site-favicon">Site Favicon</h3>
-<p>Place your site favicon image file in the top level of your docs directory and then include a new <code>site_favicon:</code> field in the <code>mkdocs.yml</code> file:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-site_favicon: favicon.ico
-nav:
-  - Home: index.md
-  - About: about.md</code></pre>
+<h3 id="syntax-highlighting-color-scheme">Syntax Highlighting Color Scheme</h3>
+<p>Cinder supports the <a href="https://highlightjs.org/static/demo/">90+ highlightjs color schemes</a>.  The <code>github</code> color scheme that you see on this page is the default and will be used if you do not specify otherwise.</p>
+<p>To change to a different scheme, include the <code>colorscheme</code> field under the <code>theme</code> field in your <code>mkdocs.yml</code> file and enter the color scheme name.  For example, to switch to the <a href="https://draculatheme.com/">Dracula theme</a>, enter the following:</p>
+<pre><code class="yml">theme:
+  name: null
+  custom_dir: cinder
+  colorscheme: dracula
 
+</code></pre>
+
+<p>and then rebuild your site.</p>
+<p>The color scheme name should match the base name of the highlightjs CSS file.  See the <a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles"><code>src/styles</code> directory of the highlightjs repository</a> for a complete list of these CSS paths.</p>
+<h3 id="site-favicon">Site Favicon</h3>
+<p>Create an <code>img</code> subdirectory in your <code>docs</code> directory and add a custom favicon.ico file.  See the <a href="https://www.mkdocs.org/#changing-the-favicon-icon">MkDocs documentation</a> for additional details.</p>
 <h3 id="add-your-own-css-stylesheets">Add Your Own CSS Stylesheets</h3>
 <p>Create a <code>css</code> directory inside your <code>docs</code> directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the <code>mkdocs.yml</code> file with the <code>extra_css</code> field:</p>
 <pre><code class="yaml">site_name: [YOURPROJECT]
@@ -313,8 +311,8 @@ nav:
   - About: about.md</code></pre>
 
 <h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
-<p>In your <code>mkdocs.yml</code> file, place the following to enable keyboard shortcuts. </p>
-<pre><code>shortcuts:
+<p>Place the following in your <code>mkdocs.yml</code> file to enable keyboard shortcuts:</p>
+<pre><code class="shell">shortcuts:
     help: 191    # ?
     next: 39     # right arrow
     previous: 37 # left arrow
@@ -327,7 +325,7 @@ nav:
 <pre><code class="html">{% extends &quot;base.html&quot; %}
 </code></pre>
 
-<p>Instead of using <code>theme: cinder</code> or <code>theme_dir: cinder</code> in <code>mkdocs.yml</code>, use:</p>
+<p>Instead of using <code>theme_dir: cinder</code> in <code>mkdocs.yml</code>, use:</p>
 <pre><code class="yaml">theme:
     name: cinder
     custom_dir: [custom dir]</code></pre>
@@ -399,8 +397,11 @@ nav:
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap-3.0.3.min.js"></script>
-    <script src="js/highlight.pack.js"></script>
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    
     <script>var base_url = "."</script>
     
     <script src="js/base.js"></script>
@@ -478,5 +479,5 @@ nav:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-01-26 18:00:10
+Build Date UTC : 2020-01-29 03:21:21
 -->

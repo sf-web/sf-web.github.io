@@ -22,7 +22,11 @@
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="../css/base.min.css" rel="stylesheet">
     <link href="../css/cinder.min.css" rel="stylesheet">
-    <link href="../css/highlight.min.css" rel="stylesheet">
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -266,38 +270,7 @@ def get(url, params=None, **kwargs):
 <div id="language-support"></div>
 
 <p><small>(Source code sample from the Python <a href="https://github.com/requests/requests">requests library</a>, <a href="https://github.com/requests/requests/blob/master/LICENSE">Apache License, v2.0</a>)</small></p>
-<p>Syntax highlighting support is available for the following languages:</p>
-<ul>
-<li>Apache</li>
-<li>Bash</li>
-<li>C#</li>
-<li>C++</li>
-<li>CSS</li>
-<li>CoffeeScript</li>
-<li>Diff</li>
-<li>Go</li>
-<li>HTML/XML</li>
-<li>HTTP</li>
-<li>Ini, TOML</li>
-<li>JSON</li>
-<li>Java</li>
-<li>JavaScript</li>
-<li>Makefile</li>
-<li>Markdown</li>
-<li>Nginx</li>
-<li>Objective-C</li>
-<li>PHP</li>
-<li>Perl</li>
-<li>Properties</li>
-<li>Python</li>
-<li>R</li>
-<li>Ruby</li>
-<li>Rust</li>
-<li>SQL</li>
-<li>Shell Session</li>
-<li>Swift</li>
-<li>YAML</li>
-</ul>
+<p>Syntax highlighting support is available for and of the following languages listed on the <a href="https://highlightjs.org/download/">highlightjs website</a>. See the <a href="https://www.mkdocs.org/user-guide/styling-your-docs/">mkdocs "styling your docs"</a> hljs_languages section for info on how to load languages dynamically.</p>
 <div class="bs-callout bs-callout-info">
   <h4>Note</h4>
   Include source code formatted in <a href="https://github.github.com/gfm/#fenced-code-blocks" class="alert-link">Github-flavored Markdown fenced code blocks</a> with an <a href="https://github.github.com/gfm/#info-string" class="alert-link">info string</a> that defines the supported programming language to automate syntax highlighting when your site is built.
@@ -546,8 +519,11 @@ def func(arg) {
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../js/highlight.pack.js"></script>
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    
     <script>var base_url = ".."</script>
     
     <script src="../js/base.js"></script>
