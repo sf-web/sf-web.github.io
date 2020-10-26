@@ -58,7 +58,9 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href=".">Cinder</a>
+            
+              <a class="navbar-brand" href=".">Cinder</a>
+            
         </div>
 
         <!-- Expanded navigation -->
@@ -146,6 +148,8 @@
                 
             <li class="second-level"><a href="#license-declaration-and-link">License Declaration and Link</a></li>
                 
+            <li class="second-level"><a href="#disabling-theme-features">Disabling Theme Features</a></li>
+                
         <li class="first-level "><a href="#issues">Issues</a></li>
         <li class="first-level "><a href="#license">License</a></li>
     </ul>
@@ -175,7 +179,7 @@
 
 <h3 id="install-the-cinder-theme">Install the Cinder Theme<a class="headerlink" href="#install-the-cinder-theme" title="Permanent link">&para;</a></h3>
 <p>Download the Cinder theme archive by clicking the button below.</p>
-<p><a href="https://github.com/chrissimpkins/cinder/archive/v1.1.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a></p>
+<p><a href="https://github.com/chrissimpkins/cinder/archive/v1.2.0.zip"><button type="button" class="btn btn-success"><i class="fas fa-cloud-download-alt fa-3x"></i> </br>  <span style="font-size:20px;">Download Cinder</span></button></a></p>
 <p>Unpack the contents of the archive into a directory named <code>cinder</code> at the top level of your MkDocs project directory.</p>
 <p>Your project directory should now look like this:</p>
 <pre><code class="shell">.
@@ -381,6 +385,22 @@ nav:
   - Home: index.md
   - About: about.md</code></pre>
 
+<h3 id="disabling-theme-features">Disabling Theme Features<a class="headerlink" href="#disabling-theme-features" title="Permanent link">&para;</a></h3>
+<p>The Cinder theme can turn off some theme features entirely in <code>mkdocs.yml</code>, for situations where you don't need these features. If this is all the customization required, it saves overriding theme files. For example:</p>
+<pre><code class="yml">theme:
+  name: cinder
+  # Turn off Previous/Next navigation links in the navbar
+  disable_nav_previous_next: true
+  # Turn off Search in the navbar
+  disable_nav_search: true
+  # Turn off the site_name link in the navbar
+  disable_nav_site_name: true
+  # Turn off the footer entirely
+  disable_footer: true
+  # Turn off the default footer message, but display the page revision date if it's available
+  disable_footer_except_revision: true
+</code></pre>
+
 <h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
 <p>If you have any issues with the theme, please report them on the Cinder repository:</p>
 <p><a href="https://github.com/chrissimpkins/cinder/issues/new"><button class="btn btn-primary btn-lg" type="submit"><i class="fab fa-github fa-2x"></i> Report Issue</button></a>
@@ -391,18 +411,22 @@ nav:
         
     </div>
 
-    <footer class="col-md-12 text-center">
-        
-        <hr>
-        <p>
-        <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a></small><br>
-        
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-        </p>
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
 
-        
-        
-    </footer>
+          
+          
+      </footer>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap-3.0.3.min.js"></script>
 
@@ -489,5 +513,5 @@ nav:
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-10-26 03:23:22.678556+00:00
+Build Date UTC : 2020-10-26 22:29:16.416870+00:00
 -->
